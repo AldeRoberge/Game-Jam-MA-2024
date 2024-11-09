@@ -30,7 +30,7 @@ position = Vector2(100, 443)
 zoom = Vector2(3, 3)
 
 [node name="Player 1" parent="." instance=ExtResource("3_qb575")]
-position = Vector2(45, 383)
+position = Vector2(50, 405)
 
 [node name="Player ID" type="RichTextLabel" parent="Player 1"]
 modulate = Color(0, 0.733333, 1, 1)

@@ -121,11 +121,11 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		elif velocity.x > 0 and move_right:
 			new_siding_left = false
 		if jumping:
-			new_anim = "jump"
+			new_anim = _get_player_id() + "jump"
 		elif absf(velocity.x) < 0.1:	
-			new_anim = "idle"
+			new_anim = _get_player_id() + "idle"
 		else:
-			new_anim = "walk"
+			new_anim = _get_player_id() + "walk"
 	else:
 		# Check double jump
 		if can_double_jump and jump:
@@ -148,9 +148,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			velocity.x = signf(velocity.x) * xv
 
 		if velocity.y < 0:
-			new_anim = "jump"
+			new_anim = _get_player_id() + "jump"
 		else:
-			new_anim = "fall"
+			new_anim = _get_player_id() + "fall"
 
 	# Update siding.
 	if new_siding_left != siding_left:
@@ -181,6 +181,21 @@ func _spawn_enemy_above() -> void:
 	enemy.position = position + 50 * Vector2.UP
 	get_parent().add_child(enemy)
 
+
+
+######################## PLAYER ID LOGIC ########################
+
+func _get_player_id() -> String:
+	if device_id == 0:
+		return "p1_"
+	elif device_id == 1:
+		return "p2_"
+	elif device_id == 2:
+		return "p3_"
+	elif device_id == 3:
+		return "p4_"
+	else:
+		return "p1_"
 
 ######################### HANDLE PLAYER INPUT LOGIC #########################
 
