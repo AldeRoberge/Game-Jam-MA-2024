@@ -1,0 +1,173 @@
+[gd_scene load_steps=8 format=3 uid="uid://g3yq6kldorfv"]
+
+[ext_resource type="Script" path="res://scenes/input-controller-debugger/input-controller-debugger.gd" id="1_dni48"]
+[ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player-idle.png" id="2_sm6n2"]
+[ext_resource type="Texture2D" uid="uid://cwtu8k5qiw5n2" path="res://assets/sprites/players/p2/player2-ilde.png" id="3_nywmm"]
+[ext_resource type="Texture2D" uid="uid://bmb5472ggabqy" path="res://assets/sprites/players/p3/player3-ilde.png" id="4_ta8db"]
+[ext_resource type="Texture2D" uid="uid://bi5titnj4q7ap" path="res://assets/sprites/players/p4/player4-ilde.png" id="5_vghqv"]
+
+[sub_resource type="FontFile" id="FontFile_6sgiu"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontFile" id="FontFile_hnk6k"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="Input-controller-debugger" type="Node2D"]
+position = Vector2(179, 146)
+
+[node name="Control" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 83.0
+offset_bottom = 70.0
+script = ExtResource("1_dni48")
+font = SubResource("FontFile_6sgiu")
+label_device_id = NodePath("Device ID")
+label_device_name = NodePath("Device Name")
+metadata/_edit_use_anchors_ = true
+
+[node name="Device ID" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_top = 73.0
+offset_right = 77.0
+offset_bottom = 105.0
+bbcode_enabled = true
+text = "[center]P1[/center]"
+
+[node name="Device Name" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -28.0
+offset_right = 88.0
+offset_bottom = 4.0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]XInput Gamepad[/center]"
+
+[node name="Control2" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 99.0
+offset_top = 1.0
+offset_right = 180.0
+offset_bottom = 70.0
+script = ExtResource("1_dni48")
+device = 1
+font = SubResource("FontFile_hnk6k")
+label_device_id = NodePath("Device ID")
+label_device_name = NodePath("Device Name")
+metadata/_edit_use_anchors_ = true
+
+[node name="Device ID" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 70.0
+offset_right = 79.0
+offset_bottom = 102.0
+bbcode_enabled = true
+text = "[center]P2[/center]"
+
+[node name="Device Name" type="RichTextLabel" parent="Control2"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -28.0
+offset_right = 89.0
+offset_bottom = 4.0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]Wireless Gamepad[/center]"
+
+[node name="Control3" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 197.0
+offset_right = 278.0
+offset_bottom = 69.0
+script = ExtResource("1_dni48")
+device = 2
+font = SubResource("FontFile_hnk6k")
+label_device_id = NodePath("Device ID")
+label_device_name = NodePath("Device Name")
+metadata/_edit_use_anchors_ = true
+
+[node name="Device ID" type="RichTextLabel" parent="Control3"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 69.0
+offset_right = 80.0
+offset_bottom = 101.0
+bbcode_enabled = true
+text = "[center]P3[/center]"
+
+[node name="Device Name" type="RichTextLabel" parent="Control3"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -28.0
+offset_right = 91.0
+offset_bottom = 4.0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]XInput Gamepad[/center]"
+
+[node name="Control4" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 300.0
+offset_top = 1.0
+offset_right = 381.0
+offset_bottom = 70.0
+script = ExtResource("1_dni48")
+device = 3
+font = SubResource("FontFile_hnk6k")
+label_device_id = NodePath("Device ID")
+label_device_name = NodePath("Device Name")
+metadata/_edit_use_anchors_ = true
+
+[node name="Device ID" type="RichTextLabel" parent="Control4"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 70.0
+offset_right = 79.0
+offset_bottom = 102.0
+bbcode_enabled = true
+text = "[center]P4[/center]"
+
+[node name="Device Name" type="RichTextLabel" parent="Control4"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -28.0
+offset_right = 92.0
+offset_bottom = 4.0
+theme_override_font_sizes/normal_font_size = 8
+bbcode_enabled = true
+text = "[center]XInput Gamepad[/center]"
+
+[node name="Player-idle" type="Sprite2D" parent="."]
+position = Vector2(42, 135)
+scale = Vector2(1.9375, 1.9375)
+texture = ExtResource("2_sm6n2")
+
+[node name="Player2-ilde" type="Sprite2D" parent="."]
+position = Vector2(141, 135)
+scale = Vector2(2.0625, 2.0625)
+texture = ExtResource("3_nywmm")
+
+[node name="Player3-ilde" type="Sprite2D" parent="."]
+position = Vector2(241, 134)
+scale = Vector2(2.125, 2.125)
+texture = ExtResource("4_ta8db")
+
+[node name="Player4-ilde" type="Sprite2D" parent="."]
+position = Vector2(343, 135)
+scale = Vector2(2.0625, 2.0625)
+texture = ExtResource("5_vghqv")
