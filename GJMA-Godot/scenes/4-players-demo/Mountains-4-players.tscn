@@ -29,5 +29,53 @@ tile_set = ExtResource("2_1s4wu")
 position = Vector2(100, 443)
 zoom = Vector2(3, 3)
 
-[node name="Player" parent="." instance=ExtResource("3_qb575")]
+[node name="Player 1" parent="." instance=ExtResource("3_qb575")]
 position = Vector2(45, 383)
+
+[node name="Player ID" type="RichTextLabel" parent="Player 1"]
+modulate = Color(0, 0.733333, 1, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P1[/center]"
+
+[node name="Player 2" parent="." instance=ExtResource("3_qb575")]
+position = Vector2(118, 414)
+device_id = 1
+
+[node name="Player ID" type="RichTextLabel" parent="Player 2"]
+modulate = Color(1, 0.0117647, 0, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P2[/center]"
+
+[node name="Player 3" parent="." instance=ExtResource("3_qb575")]
+position = Vector2(149, 406)
+device_id = 2
+
+[node name="Player ID" type="RichTextLabel" parent="Player 3"]
+modulate = Color(0.945769, 2.98411e-06, 0.589617, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P2[/center]"
+
+[node name="Player 4" parent="." instance=ExtResource("3_qb575")]
+position = Vector2(202, 397)
+device_id = 3
+
+[node name="Player ID" type="RichTextLabel" parent="Player 4"]
+modulate = Color(0, 1, 0, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P2[/center]"
