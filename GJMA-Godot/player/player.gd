@@ -14,6 +14,10 @@ const MAX_FLOOR_AIRBORNE_TIME = 0.15
 const BULLET_SCENE = preload("res://player/bullet.tscn")
 const ENEMY_SCENE = preload("res://enemy/enemy.tscn")
 
+
+# Allow to select the player device id (int) in the editor.
+@export var device_id := 0
+
 var anim := ""
 var siding_left := false
 var jumping := false
@@ -24,11 +28,15 @@ var floor_h_velocity: float = 0.0
 
 var airborne_time: float = 1e20
 
+
 @onready var sound_jump := $SoundJump as AudioStreamPlayer2D
 @onready var sound_shoot := $SoundShoot as AudioStreamPlayer2D
 @onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
 @onready var sprite_smoke := sprite.get_node(^"Smoke") as CPUParticles2D
 @onready var bullet_shoot := $BulletShoot as Marker2D
+
+
+
 
 func _do_jump(velocity: Vector2) -> Vector2:
 	velocity.y = -JUMP_VELOCITY
@@ -46,10 +54,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var new_siding_left := siding_left
 
 	# Get player input.
-	var move_left := Input.is_action_pressed(&"move_left")
-	var move_right := Input.is_action_pressed(&"move_right")
-	var jump := Input.is_action_just_pressed(&"jump")
-	var spawn := Input.is_action_just_pressed(&"spawn")
+	var move_left := _get_input_dpad_left() or _get_input_joy_left().x < -0.5
+	var move_right := _get_input_dpad_right() or _get_input_joy_left().x > 0.5
+	var jump := _get_input_jump()
+	var spawn := _get_input_spawn()
 
 	if spawn:
 		_spawn_enemy_above.call_deferred()
@@ -172,3 +180,28 @@ func _spawn_enemy_above() -> void:
 	var enemy := ENEMY_SCENE.instantiate() as RigidBody2D
 	enemy.position = position + 50 * Vector2.UP
 	get_parent().add_child(enemy)
+
+
+######################### HANDLE PLAYER INPUT LOGIC #########################
+
+# debug button (spawn enemy) is the left bumper
+func _get_input_spawn() -> bool: return Input.is_joy_button_pressed(device_id, JOY_BUTTON_LEFT_SHOULDER)
+
+func _get_input_dpad_left() -> bool: return Input.is_joy_button_pressed(device_id, JOY_BUTTON_DPAD_LEFT)
+func _get_input_dpad_right() -> bool: return Input.is_joy_button_pressed(device_id, JOY_BUTTON_DPAD_RIGHT)
+func _get_input_dpad_up() -> bool: return Input.is_joy_button_pressed(device_id, JOY_BUTTON_DPAD_UP)
+func _get_input_dpad_down() -> bool: return Input.is_joy_button_pressed(device_id, JOY_BUTTON_DPAD_DOWN)
+
+# get the joystick input
+func _get_input_joy_left() -> Vector2:
+	return Vector2(Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X), Input.get_joy_axis(device_id, JOY_AXIS_LEFT_Y))
+
+# Get the jump input (any face button)
+func _get_input_jump() -> bool:
+	return Input.is_joy_button_pressed(device_id, JOY_BUTTON_X) or \
+		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_Y) or \
+		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_B) or \
+		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
+
+
+####################### END PLAYER INPUT LOGIC ##############################

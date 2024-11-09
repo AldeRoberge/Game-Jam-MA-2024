@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://g3yq6kldorfv"]
+[gd_scene load_steps=9 format=3 uid="uid://g3yq6kldorfv"]
 
 [ext_resource type="Script" path="res://scenes/input-controller-debugger/input-controller-debugger.gd" id="1_dni48"]
+[ext_resource type="FontFile" uid="uid://bkrjr1t12kkb7" path="res://assets/fonts/Micro_5/Micro5-Regular.ttf" id="2_3jp1f"]
 [ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player-idle.png" id="2_sm6n2"]
 [ext_resource type="Texture2D" uid="uid://cwtu8k5qiw5n2" path="res://assets/sprites/players/p2/player2-ilde.png" id="3_nywmm"]
 [ext_resource type="Texture2D" uid="uid://bmb5472ggabqy" path="res://assets/sprites/players/p3/player3-ilde.png" id="4_ta8db"]
@@ -21,7 +22,7 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [node name="Input-controller-debugger" type="Node2D"]
-position = Vector2(14, 94)
+position = Vector2(405, 337)
 scale = Vector2(2, 2)
 
 [node name="Control" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name", "label_state")]
@@ -40,6 +41,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Device ID" type="RichTextLabel" parent="Control"]
 modulate = Color(0, 0.733333, 1, 1)
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0185185
@@ -49,11 +51,14 @@ anchor_bottom = -0.0724638
 offset_top = 73.0
 offset_right = 77.0
 offset_bottom = 105.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 36
 bbcode_enabled = true
 text = "[center]P1[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Device Name" type="RichTextLabel" parent="Control"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00617284
@@ -64,7 +69,9 @@ offset_left = -9.0
 offset_top = -28.0
 offset_right = 88.0
 offset_bottom = 4.0
-theme_override_font_sizes/normal_font_size = 8
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[center]XInput Gamepad[/center]"
 metadata/_edit_use_anchors_ = true
@@ -75,6 +82,7 @@ scale = Vector2(1.9375, 1.9375)
 texture = ExtResource("2_sm6n2")
 
 [node name="Name" type="RichTextLabel" parent="Control"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00617284
@@ -85,20 +93,26 @@ offset_left = -9.0
 offset_top = -28.0
 offset_right = 88.0
 offset_bottom = 4.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[center]Mada[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control"]
-modulate = Color(0.1, 0.9, 0.1, 1)
+modulate = Color(0.9, 0.9, 0.1, 1)
+texture_filter = 3
 layout_mode = 0
 offset_left = -0.5
 offset_top = 184.0
 offset_right = 83.5
 offset_bottom = 224.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]READY[/center]"
+text = "[center]WAITING[/center]"
+metadata/_edit_use_anchors_ = true
 
 [node name="Control2" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name", "label_state")]
 layout_mode = 3
@@ -117,6 +131,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Device ID" type="RichTextLabel" parent="Control2"]
 modulate = Color(1, 0, 0, 1)
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.00617284
@@ -127,11 +142,14 @@ offset_left = 2.0
 offset_top = 70.0
 offset_right = 79.0
 offset_bottom = 102.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
 text = "[center]P2[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Device Name" type="RichTextLabel" parent="Control2"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.123188
@@ -140,7 +158,9 @@ offset_left = -10.0
 offset_top = -28.0
 offset_right = 89.0
 offset_bottom = 4.0
-theme_override_font_sizes/normal_font_size = 8
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[center]Wireless Gamepad[/center]"
 metadata/_edit_use_anchors_ = true
@@ -151,6 +171,7 @@ scale = Vector2(2.0625, 2.0625)
 texture = ExtResource("3_nywmm")
 
 [node name="Name" type="RichTextLabel" parent="Control2"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.00617284
@@ -161,19 +182,26 @@ offset_left = -9.0
 offset_top = -28.0
 offset_right = 88.0
 offset_bottom = 4.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[center]Vitalen[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control2"]
-modulate = Color(0.1, 0.9, 0.1, 1)
+modulate = Color(0.9, 0.9, 0.1, 1)
+texture_filter = 3
+layout_mode = 0
 offset_left = -0.5
 offset_top = 184.0
 offset_right = 83.5
 offset_bottom = 224.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]READY[/center]"
+text = "[center]WAITING[/center]"
+metadata/_edit_use_anchors_ = true
 
 [node name="Control3" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name", "label_state")]
 layout_mode = 3
@@ -192,6 +220,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Device ID" type="RichTextLabel" parent="Control3"]
 modulate = Color(0.733813, 0.199665, 1, 1)
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.0246914
@@ -202,11 +231,14 @@ offset_left = 3.0
 offset_top = 69.0
 offset_right = 80.0
 offset_bottom = 101.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
 text = "[center]P3[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Device Name" type="RichTextLabel" parent="Control3"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.115942
@@ -215,9 +247,11 @@ offset_left = -12.0
 offset_top = -28.0
 offset_right = 91.0
 offset_bottom = 4.0
-theme_override_font_sizes/normal_font_size = 8
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]XInput Gamepad[/center]"
+text = "[center][/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player3-ilde" type="Sprite2D" parent="Control3"]
@@ -226,6 +260,7 @@ scale = Vector2(2.125, 2.125)
 texture = ExtResource("4_ta8db")
 
 [node name="Name" type="RichTextLabel" parent="Control3"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.037037
@@ -236,19 +271,26 @@ offset_left = -9.0
 offset_top = -28.0
 offset_right = 88.0
 offset_bottom = 4.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[center]Lifex[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control3"]
-modulate = Color(0.1, 0.9, 0.1, 1)
+modulate = Color(0.9, 0.9, 0.1, 1)
+texture_filter = 3
+layout_mode = 0
 offset_left = -0.5
 offset_top = 184.0
 offset_right = 83.5
 offset_bottom = 224.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]READY[/center]"
+text = "[center]WAITING[/center]"
+metadata/_edit_use_anchors_ = true
 
 [node name="Control4" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name", "label_state")]
 layout_mode = 3
@@ -267,6 +309,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Device ID" type="RichTextLabel" parent="Control4"]
 modulate = Color(0.439363, 0.737829, 7.70092e-07, 1)
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.0362319
@@ -275,11 +318,14 @@ offset_left = 2.0
 offset_top = 70.0
 offset_right = 79.0
 offset_bottom = 102.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
 text = "[center]P4[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Device Name" type="RichTextLabel" parent="Control4"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.00617284
@@ -290,7 +336,9 @@ offset_left = -13.0
 offset_top = -28.0
 offset_right = 92.0
 offset_bottom = 4.0
-theme_override_font_sizes/normal_font_size = 8
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[center]XInput Gamepad[/center]"
 metadata/_edit_use_anchors_ = true
@@ -301,6 +349,7 @@ scale = Vector2(2.0625, 2.0625)
 texture = ExtResource("5_vghqv")
 
 [node name="Name" type="RichTextLabel" parent="Control4"]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0185185
@@ -311,16 +360,23 @@ offset_left = -9.0
 offset_top = -28.0
 offset_right = 88.0
 offset_bottom = 4.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[center]Almidefi[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control4"]
-modulate = Color(0.1, 0.9, 0.1, 1)
+modulate = Color(0.9, 0.9, 0.1, 1)
+texture_filter = 3
+layout_mode = 0
 offset_left = -0.5
 offset_top = 184.0
 offset_right = 83.5
 offset_bottom = 224.0
+theme_override_fonts/normal_font = ExtResource("2_3jp1f")
+theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]READY[/center]"
+text = "[center]WAITING[/center]"
+metadata/_edit_use_anchors_ = true
