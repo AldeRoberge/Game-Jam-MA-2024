@@ -27,7 +27,7 @@ script = ExtResource("1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("6_3pb50")
-animation = &"fall"
+animation = &"walk"
 
 [node name="Smoke" type="CPUParticles2D" parent="AnimatedSprite2D"]
 self_modulate = Color(1, 1, 1, 0.26702)
