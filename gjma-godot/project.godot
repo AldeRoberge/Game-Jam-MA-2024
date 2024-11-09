@@ -16,7 +16,7 @@ character controllers are more powerful than CharacterBody2D,
 but can be more difficult to handle, as they require
 manual modification of the RigidBody3D velocity."
 config/tags=PackedStringArray("2d", "demo", "official", "physics", "tilemap")
-run/main_scene="res://stage.tscn"
+run/main_scene="res://scenes/input-controller-debugger/input-controller-debugger.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.webp"
 
@@ -27,6 +27,10 @@ window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/copilot/plugin.cfg")
 
 [importer_defaults]
 
