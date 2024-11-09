@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 		label_state.modulate = Color(0.1, 0.9, 0.1)
 	queue_redraw()
 
+
 # on start, set label text to the device name
 func _ready() -> void:
 	label_state.text = "[center]" + state + "[/center]"
