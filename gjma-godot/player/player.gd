@@ -17,6 +17,7 @@ const ENEMY_SCENE = preload("res://enemy/enemy.tscn")
 var anim := ""
 var siding_left := false
 var jumping := false
+var can_double_jump := false
 var stopping_jump := false
 var shooting := false
 
@@ -32,6 +33,13 @@ var shoot_time: float = 1e20
 @onready var animation_player := $AnimationPlayer as AnimationPlayer
 @onready var bullet_shoot := $BulletShoot as Marker2D
 
+func _do_jump(velocity: Vector2) -> Vector2:
+	velocity.y = -JUMP_VELOCITY
+	jumping = true
+	stopping_jump = false
+	sound_jump.play()
+	return velocity
+	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var velocity := state.get_linear_velocity()
@@ -43,7 +51,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	# Get player input.
 	var move_left := Input.is_action_pressed(&"move_left")
 	var move_right := Input.is_action_pressed(&"move_right")
-	var jump := Input.is_action_pressed(&"jump")
+	var jump := Input.is_action_just_pressed(&"jump")
 	var shoot := Input.is_action_pressed(&"shoot")
 	var spawn := Input.is_action_just_pressed(&"spawn")
 
@@ -107,10 +115,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 		# Check jump.
 		if not jumping and jump:
-			velocity.y = -JUMP_VELOCITY
-			jumping = true
-			stopping_jump = false
-			sound_jump.play()
+			can_double_jump = true
+			velocity = _do_jump(velocity)
 
 		# Check siding.
 		if velocity.x < 0 and move_left:
@@ -130,6 +136,11 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			else:
 				new_anim = "run"
 	else:
+		# Check double jump
+		if can_double_jump and jump:
+			can_double_jump = false
+			velocity = _do_jump(velocity)
+		
 		# Process logic when the character is in the air.
 		if move_left and not move_right:
 			if velocity.x > -WALK_MAX_VELOCITY:
