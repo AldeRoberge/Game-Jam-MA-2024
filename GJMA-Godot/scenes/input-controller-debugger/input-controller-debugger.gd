@@ -4,12 +4,20 @@ extends Control
 @export var device: int = 0
 @export var font: Font  # Add this line to export a font variable for the Inspector
 
-
 @export var label_device_id: RichTextLabel
 @export var label_device_name: RichTextLabel
+@export var label_state: RichTextLabel
+
+var state: String = "WAITING"
 
 func _process(delta: float) -> void:
+	if Input.is_joy_button_pressed(device, JOY_BUTTON_START):
+		state = "ready"
+		label_state.text = "[center]READY[/center]"
+		label_state.modulate = Color(0.1, 0.9, 0.1)
+
 	queue_redraw()
+
 
 # on start, set label text to the device name
 func _ready() -> void:
