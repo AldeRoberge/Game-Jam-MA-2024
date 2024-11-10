@@ -43,12 +43,23 @@ z_index = 1
 [node name="Player 1" parent="Players" instance=ExtResource("2_fbb6p")]
 position = Vector2(65, 617)
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 1"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P1[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 1"]
 modulate = Color(0, 0.733333, 1, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -58,12 +69,23 @@ text = "[center]P1[/center]"
 position = Vector2(128, 598)
 device_id = 1
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P2[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 2"]
 modulate = Color(1, 0.0117647, 0, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -73,12 +95,23 @@ text = "[center]P2[/center]"
 position = Vector2(255, 578)
 device_id = 2
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P3[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 3"]
 modulate = Color(0.945769, 2.98411e-06, 0.589617, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -88,12 +121,23 @@ text = "[center]P3[/center]"
 position = Vector2(346, 579)
 device_id = 3
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 4"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P4[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 4"]
 modulate = Color(0, 1, 0, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true

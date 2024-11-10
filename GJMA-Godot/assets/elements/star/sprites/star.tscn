@@ -80,10 +80,12 @@ initial_velocity_max = 10.0
 modulate = Color(0.567622, 0.708996, 1, 1)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_xhtgu")
-frame_progress = 0.0656783
+autoplay = "default"
+frame_progress = 0.612236
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xhtgu")
+autoplay = "default"
 frame_progress = 0.748326
 
 [node name="Collider" type="Area2D" parent="."]
