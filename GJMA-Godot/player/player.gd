@@ -4,8 +4,8 @@ extends RigidBody2D
 const WALK_ACCEL = 1000.0
 const WALK_DEACCEL = 1000.0
 const WALK_MAX_VELOCITY = 200.0
-const AIR_ACCEL = 250.0
-const AIR_DEACCEL = 250.0
+const AIR_ACCEL = 800.0
+const AIR_DEACCEL = 800.0
 const JUMP_VELOCITY = 380.0
 const STOP_JUMP_FORCE = 450.0
 const MAX_SHOOT_POSE_TIME = 0.3
