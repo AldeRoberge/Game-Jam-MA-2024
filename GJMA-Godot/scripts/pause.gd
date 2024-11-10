@@ -1,6 +1,6 @@
 extends Node
 
-var old_start = null
+var old_start = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
