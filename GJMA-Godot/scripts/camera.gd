@@ -43,21 +43,21 @@ func _process(delta: float) -> void:
 	if timer.is_stopped():
 		# Wait that player jump up a bit before beginning the game.
 		var min_start_position = target_position_y - 100
-		if (player1.position.y < min_start_position) and \
-		(player2.position.y < min_start_position) and \
-		(player3.position.y < min_start_position) and \
-		(player4.position.y < min_start_position):
+		if (is_instance_valid(player1) and player1.position.y < min_start_position) and \
+		(is_instance_valid(player2) and player2.position.y < min_start_position) and \
+		(is_instance_valid(player3) and player3.position.y < min_start_position) and \
+		(is_instance_valid(player4) and player4.position.y < min_start_position):
 			timer.start(time_to_night_seconds)
 	else:
 		# Thats the super scrolling code.
 		var top_screen_limit = target_position_y - 100
-		if player1.position.y < top_screen_limit:
+		if is_instance_valid(player1) and player1.position.y < top_screen_limit:
 			target_position_y = player1.position.y
-		if player2.position.y < top_screen_limit:
+		if is_instance_valid(player2) and player2.position.y < top_screen_limit:
 			target_position_y = player2.position.y
-		if player3.position.y < top_screen_limit:
+		if is_instance_valid(player3) and player3.position.y < top_screen_limit:
 			target_position_y = player3.position.y
-		if player4.position.y < top_screen_limit:
+		if is_instance_valid(player4) and player4.position.y < top_screen_limit:
 			target_position_y = player4.position.y
 
 		var progress = (1.0 - timer.time_left / timer.wait_time) * 100
