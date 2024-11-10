@@ -218,4 +218,7 @@ func _get_input_jump() -> bool:
 		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_B) or \
 		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
 
+
+
+
 ####################### END PLAYER INPUT LOGIC ##############################
