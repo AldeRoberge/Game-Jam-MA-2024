@@ -1,13 +1,47 @@
-[gd_scene load_steps=9 format=3 uid="uid://g3yq6kldorfv"]
+[gd_scene load_steps=11 format=3 uid="uid://g3yq6kldorfv"]
 
 [ext_resource type="Script" path="res://scenes/input-controller-debugger/input-controller-debugger.gd" id="1_dni48"]
+[ext_resource type="Script" path="res://scenes/input-controller-debugger/input_controller_debugger_scene.gd" id="1_v63wx"]
 [ext_resource type="FontFile" uid="uid://bkrjr1t12kkb7" path="res://assets/fonts/Micro_5/Micro5-Regular.ttf" id="2_3jp1f"]
+[ext_resource type="PackedScene" uid="uid://b6n2opy1im2t6" path="res://scenes/main.tscn" id="2_dv6d2"]
 [ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player-idle.png" id="2_sm6n2"]
 [ext_resource type="Texture2D" uid="uid://cwtu8k5qiw5n2" path="res://assets/sprites/players/p2/player2-ilde.png" id="3_nywmm"]
 [ext_resource type="Texture2D" uid="uid://bmb5472ggabqy" path="res://assets/sprites/players/p3/player3-ilde.png" id="4_ta8db"]
 [ext_resource type="Texture2D" uid="uid://bi5titnj4q7ap" path="res://assets/sprites/players/p4/player4-ilde.png" id="5_vghqv"]
 
 [sub_resource type="FontFile" id="FontFile_6sgiu"]
+resource_local_to_scene = false
+resource_name = ""
+fallbacks = Array[Font]([])
+data = PackedByteArray()
+generate_mipmaps = false
+disable_embedded_bitmaps = true
+antialiasing = 1
+font_name = ""
+style_name = ""
+font_style = 0
+font_weight = 400
+font_stretch = 100
+subpixel_positioning = 1
+multichannel_signed_distance_field = false
+msdf_pixel_range = 16
+msdf_size = 48
+allow_system_fallback = true
+force_autohinter = false
+hinting = 1
+oversampling = 0.0
+fixed_size = 0
+fixed_size_scale_mode = 0
+opentype_feature_overrides = {}
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -15,6 +49,38 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_hnk6k"]
+resource_local_to_scene = false
+resource_name = ""
+fallbacks = Array[Font]([])
+data = PackedByteArray()
+generate_mipmaps = false
+disable_embedded_bitmaps = true
+antialiasing = 1
+font_name = ""
+style_name = ""
+font_style = 0
+font_weight = 400
+font_stretch = 100
+subpixel_positioning = 1
+multichannel_signed_distance_field = false
+msdf_pixel_range = 16
+msdf_size = 48
+allow_system_fallback = true
+force_autohinter = false
+hinting = 1
+oversampling = 0.0
+fixed_size = 0
+fixed_size_scale_mode = 0
+opentype_feature_overrides = {}
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -24,6 +90,8 @@ cache/0/16/0/scale = 1.0
 [node name="Input-controller-debugger" type="Node2D"]
 position = Vector2(405, 337)
 scale = Vector2(2, 2)
+script = ExtResource("1_v63wx")
+next_scene = ExtResource("2_dv6d2")
 
 [node name="Control" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name", "label_state")]
 layout_mode = 3
@@ -73,7 +141,7 @@ theme_override_fonts/normal_font = ExtResource("2_3jp1f")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]XInput Gamepad[/center]"
+text = "[center]Nintendo Switch Controller[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player-idle" type="Sprite2D" parent="Control"]
@@ -101,7 +169,7 @@ text = "[center]Mada[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control"]
-modulate = Color(0.9, 0.9, 0.1, 1)
+modulate = Color(0.1, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 0
 offset_left = -0.5
@@ -111,7 +179,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("2_3jp1f")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]WAITING[/center]"
+text = "[center]READY[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Control2" type="Control" parent="." node_paths=PackedStringArray("label_device_id", "label_device_name", "label_state")]

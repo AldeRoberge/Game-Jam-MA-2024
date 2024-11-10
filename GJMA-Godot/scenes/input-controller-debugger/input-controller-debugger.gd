@@ -1,4 +1,5 @@
 @tool
+class_name InputControllerDebugger
 extends Control
 
 @export var device: int = 0
