@@ -4,10 +4,7 @@ extends Node2D
 @export var time_to_night_seconds := 60.0
 
 # A reference to the player #1
-@export var player1: Player
-@export var player2: Player
-@export var player3: Player
-@export var player4: Player
+@export var players: Array[Player]
 
 @onready var sunset := $Sunset as Sprite2D
 @onready var nightfall := $Nightfall as Sprite2D
@@ -15,8 +12,9 @@ extends Node2D
 @onready var night := $Night as Sprite2D
 @onready var timer := $Timer as Timer
 
-var progress := 0
 @onready var target_position_y := self.position.y
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,23 +40,22 @@ func _set_progress(value:float):
 func _process(delta: float) -> void:
 	if timer.is_stopped():
 		# Wait that player jump up a bit before beginning the game.
+		var readyCount := 0
 		var min_start_position = target_position_y - 100
-		if (is_instance_valid(player1) and player1.position.y < min_start_position) and \
-		(is_instance_valid(player2) and player2.position.y < min_start_position) and \
-		(is_instance_valid(player3) and player3.position.y < min_start_position) and \
-		(is_instance_valid(player4) and player4.position.y < min_start_position):
+		for i in range(players.size()):
+			if (Input.get_connected_joypads().size() > i
+				and is_instance_valid(players[i])
+				and players[i].position.y < min_start_position):
+				readyCount += 1
+		
+		if readyCount >= Input.get_connected_joypads().size():
 			timer.start(time_to_night_seconds)
 	else:
 		# Thats the super scrolling code.
 		var top_screen_limit = target_position_y - 100
-		if is_instance_valid(player1) and player1.position.y < top_screen_limit:
-			target_position_y = player1.position.y
-		if is_instance_valid(player2) and player2.position.y < top_screen_limit:
-			target_position_y = player2.position.y
-		if is_instance_valid(player3) and player3.position.y < top_screen_limit:
-			target_position_y = player3.position.y
-		if is_instance_valid(player4) and player4.position.y < top_screen_limit:
-			target_position_y = player4.position.y
+		for i in range(players.size()):
+			if is_instance_valid(players[i]) and players[i].position.y < top_screen_limit:
+				target_position_y = players[i].position.y
 
 		var progress = (1.0 - timer.time_left / timer.wait_time) * 100
 		_set_progress(progress)
