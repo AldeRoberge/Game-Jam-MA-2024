@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://s580gga8gk8t"]
+
+[ext_resource type="Texture2D" uid="uid://baevdhsspvife" path="res://assets/sprites/players/p1/player1-face.png" id="1_2isjl"]
+[ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="2_j4oh4"]
+
+[node name="Screen Death Score" type="Control"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player ID" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -22.0
+offset_right = -220.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.80414, 5.80414)
+theme_override_fonts/normal_font = ExtResource("2_j4oh4")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]P1[/center]"
+
+[node name="Player Face" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.0
+offset_top = -518.0
+offset_right = -225.0
+offset_bottom = -454.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8, 8)
+texture = ExtResource("1_2isjl")
