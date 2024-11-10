@@ -40,6 +40,11 @@ signal signal_on_death
 @onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
 @onready var sprite_smoke := sprite.get_node(^"Smoke") as CPUParticles2D
 
+func _ready() -> void:
+	if Input.get_connected_joypads().size() <= device_id:
+		for children in get_children():
+			children.queue_free()
+		queue_free()
 
 func _do_jump(velocity: Vector2) -> Vector2:
 	velocity.y = -JUMP_VELOCITY
@@ -47,7 +52,7 @@ func _do_jump(velocity: Vector2) -> Vector2:
 	stopping_jump = false
 	sound_jump.play()
 	return velocity
-	
+
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var velocity := state.get_linear_velocity()
