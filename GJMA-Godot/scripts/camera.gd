@@ -20,7 +20,6 @@ var progress := 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.start(time_to_night_seconds)
 	pass # Replace with function body.
 
 func _set_progress(value:float):
@@ -41,20 +40,30 @@ func _set_progress(value:float):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var top_screen_limit = target_position_y - 100
-	if player1.position.y < top_screen_limit:
-		target_position_y = player1.position.y
-	if player2.position.y < top_screen_limit:
-		target_position_y = player2.position.y
-	if player3.position.y < top_screen_limit:
-		target_position_y = player3.position.y
-	if player4.position.y < top_screen_limit:
-		target_position_y = player4.position.y
+	if timer.is_stopped():
+		# Wait that player jump up a bit before beginning the game.
+		var min_start_position = target_position_y - 100
+		if (player1.position.y < min_start_position) and \
+		(player2.position.y < min_start_position) and \
+		(player3.position.y < min_start_position) and \
+		(player4.position.y < min_start_position):
+			timer.start(time_to_night_seconds)
+	else:
+		# Thats the super scrolling code.
+		var top_screen_limit = target_position_y - 100
+		if player1.position.y < top_screen_limit:
+			target_position_y = player1.position.y
+		if player2.position.y < top_screen_limit:
+			target_position_y = player2.position.y
+		if player3.position.y < top_screen_limit:
+			target_position_y = player3.position.y
+		if player4.position.y < top_screen_limit:
+			target_position_y = player4.position.y
 
-	var progress = (1.0 - timer.time_left / timer.wait_time) * 100
-	_set_progress(progress)
-	target_position_y -= max_scroll_speed * delta * progress
-	
-	#smoothly move the camera to the highest player position
-	position.y = lerp(position.y, target_position_y, 0.01)
+		var progress = (1.0 - timer.time_left / timer.wait_time) * 100
+		_set_progress(progress)
+		target_position_y -= max_scroll_speed * delta * progress
+		
+		#smoothly move the camera to the highest player position
+		position.y = lerp(position.y, target_position_y, 0.01)
 	pass
