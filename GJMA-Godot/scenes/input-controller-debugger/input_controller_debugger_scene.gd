@@ -25,6 +25,6 @@ func _process(delta: float) -> void:
 			if controls[i].state == "ready":
 				readyCount += 1
 		
-	if readyCount == Input.get_connected_joypads().size():
+	if readyCount == Input.get_connected_joypads().size() && readyCount != 0:
 		get_tree().change_scene_to_packed(next_scene)
 	pass
