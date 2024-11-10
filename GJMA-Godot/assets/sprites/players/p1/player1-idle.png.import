@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2eij8kf1hq8k"
-path="res://.godot/imported/player-face-dead.png-c9747ed772c6036fdcbd872e97ccda62.ctex"
+uid="uid://c4lhuknigghff"
+path="res://.godot/imported/player1-idle.png-259fda322a5ab8b1fd33c650b644589d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/players/p1/player-face-dead.png"
-dest_files=["res://.godot/imported/player-face-dead.png-c9747ed772c6036fdcbd872e97ccda62.ctex"]
+source_file="res://assets/sprites/players/p1/player1-idle.png"
+dest_files=["res://.godot/imported/player1-idle.png-259fda322a5ab8b1fd33c650b644589d.ctex"]
 
 [params]
 

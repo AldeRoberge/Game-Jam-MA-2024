@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D):
 	if body is Player:
-		for children in body.get_children():
-			children.queue_free()
-		body.queue_free()
+		# Call the _kill_player function from the player script.
+		body._kill_player()
 	pass

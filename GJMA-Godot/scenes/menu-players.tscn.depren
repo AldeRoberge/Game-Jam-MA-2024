@@ -1,37 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://oehrl8ntuxvm"]
+[gd_scene load_steps=9 format=3 uid="uid://oehrl8ntuxvm"]
 
 [ext_resource type="Script" path="res://scenes/menu_players.gd" id="1_5e7na"]
 [ext_resource type="Texture2D" uid="uid://baevdhsspvife" path="res://assets/sprites/players/p1/player1-face.png" id="1_e3s8g"]
 [ext_resource type="Texture2D" uid="uid://bpm27mbbskqrn" path="res://assets/sprites/elements/background.png" id="2_10mbo"]
 [ext_resource type="Texture2D" uid="uid://4lyq8mln2l0f" path="res://assets/sprites/players/p2/player2-face.png" id="2_o8fyt"]
 [ext_resource type="FontFile" uid="uid://dh5v0dn3tssco" path="res://assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_qbrnr"]
-[ext_resource type="Texture2D" uid="uid://c2eij8kf1hq8k" path="res://assets/sprites/players/p1/player1-face-dead.png" id="3_7dmm6"]
 [ext_resource type="Texture2D" uid="uid://bmpsg3cgkss0r" path="res://assets/sprites/players/p3/player3-face.png" id="3_prxpu"]
 [ext_resource type="FontFile" uid="uid://mwwdxg5qau56" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="3_q46y0"]
 [ext_resource type="Texture2D" uid="uid://cw2hdxs42p53p" path="res://assets/sprites/players/p4/player4-face.png" id="4_j4lyr"]
-[ext_resource type="Texture2D" uid="uid://dni4bhbutwbdw" path="res://assets/sprites/players/p2/player2-face-dead.png" id="5_61338"]
-[ext_resource type="Texture2D" uid="uid://c6jai60ovcwbr" path="res://assets/sprites/players/p3/player3-face-dead.png" id="7_uxweg"]
-[ext_resource type="Texture2D" uid="uid://bo35uelkr0fga" path="res://assets/sprites/players/p4/player4-face-dead.png" id="9_dv5t0"]
 
-[node name="Menu Players" type="Control" node_paths=PackedStringArray("player1_texture", "player2_texture", "player3_texture", "player4_texture")]
+[node name="Menu Players" type="Control"]
 layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 1920.0
 grow_vertical = 2
 script = ExtResource("1_5e7na")
-player1_alive = ExtResource("1_e3s8g")
-player1_dead = ExtResource("3_7dmm6")
-player2_alive = ExtResource("2_o8fyt")
-player2_dead = ExtResource("5_61338")
-player3_alive = ExtResource("3_prxpu")
-player3_dead = ExtResource("7_uxweg")
-player4_alive = ExtResource("4_j4lyr")
-player4_dead = ExtResource("9_dv5t0")
-player1_texture = NodePath("Heads/Player 1 Face")
-player2_texture = NodePath("Heads/Player 2 Face")
-player3_texture = NodePath("Heads/Player 3 Face")
-player4_texture = NodePath("Heads/Player 4 Face")
 
 [node name="Background Panel Left" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.913725)

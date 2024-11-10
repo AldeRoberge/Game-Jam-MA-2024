@@ -29,9 +29,14 @@ var floor_h_velocity: float = 0.0
 
 var airborne_time: float = 1e20
 
+var _is_dead: bool = false
+
+signal signal_on_death
+
 @onready var sound_jump := $"Sound Jump" as AudioStreamPlayer2D
 @onready var sound_death := $"Sound Death" as AudioStreamPlayer2D
 @onready var sound_shoot := $"Sound Shoot" as AudioStreamPlayer2D
+
 @onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
 @onready var sprite_smoke := sprite.get_node(^"Smoke") as CPUParticles2D
 
@@ -180,7 +185,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 #	get_parent().add_child(enemy)
 
 
-
 ######################## PLAYER ID LOGIC ########################
 
 func _get_player_id() -> String:
@@ -209,12 +213,16 @@ func _get_input_dpad_down() -> bool: return Input.is_joy_button_pressed(device_i
 func _get_input_joy_left() -> Vector2:
 	return Vector2(Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X), Input.get_joy_axis(device_id, JOY_AXIS_LEFT_Y))
 
-
 # kills the player
 func _kill_player() -> void:
+	# Log the player's death.
+	print("Player " + str(device_id + 1) + " has died.")
 	sound_death.play()
-	queue_free()
-
+	_is_dead = true
+	signal_on_death.emit()
+	#for children in get_children():
+	#	children.queue_free()
+	#queue_free()
 
 # Get the jump input (any face button)
 func _get_input_jump() -> bool:
@@ -222,8 +230,6 @@ func _get_input_jump() -> bool:
 		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_Y) or \
 		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_B) or \
 		   Input.is_joy_button_pressed(device_id, JOY_BUTTON_A)
-
-
 
 
 ####################### END PLAYER INPUT LOGIC ##############################

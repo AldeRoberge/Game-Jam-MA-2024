@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://assets/elements/death_boundary.gd" id="4_o75m3"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
 [ext_resource type="FontFile" uid="uid://qajlqo85qu0i" path="res://assets/fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="6_re5bf"]
-[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5yykk"]
 
@@ -15,11 +14,7 @@
 
 [node name="Menu Canvas" type="CanvasLayer" parent="."]
 
-[node name="Menu Player" parent="Menu Canvas" node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_slmj3")]
-player1 = NodePath("../../Players/Player 1")
-player2 = NodePath("../../Players/Player 2")
-player3 = NodePath("../../Players/Player 3")
-player4 = NodePath("../../Players/Player 4")
+[node name="Menu Player" parent="Menu Canvas" instance=ExtResource("5_slmj3")]
 
 [node name="Music" parent="." instance=ExtResource("3_qifk4")]
 
@@ -98,8 +93,4 @@ text = "[center]P4[/center]"
 
 [node name="Level" parent="." instance=ExtResource("4_81fgx")]
 z_index = -1
-position = Vector2(111, -496)
-
-[node name="Pause" parent="." instance=ExtResource("7_2uwbc")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
+position = Vector2(111, 161)
