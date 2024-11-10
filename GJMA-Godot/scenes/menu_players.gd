@@ -47,6 +47,10 @@ func _ready() -> void:
 			playersScores[i].hide()
 	
 	# Connect death signals to corresponding methods
+	
+	if (is_instance_valid(player1) == false):
+		print("Player are not valid, did you start this scene from the main scene?")
+	
 	player1.signal_on_death.connect(_on_player1_dead)
 	player2.signal_on_death.connect(_on_player2_dead)
 	player3.signal_on_death.connect(_on_player3_dead)
