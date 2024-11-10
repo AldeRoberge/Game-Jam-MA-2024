@@ -14,6 +14,7 @@ extends Node2D
 
 @onready var target_position_y := self.position.y
 
+var is_started = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -38,7 +39,7 @@ func _set_progress(value:float):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if timer.is_stopped():
+	if not is_started:
 		# Wait that player jump up a bit before beginning the game.
 		var readyCount := 0
 		var min_start_position = target_position_y - 100
@@ -50,6 +51,7 @@ func _process(delta: float) -> void:
 		
 		if readyCount >= Input.get_connected_joypads().size():
 			timer.start(time_to_night_seconds)
+			is_started = true
 	else:
 		# Thats the super scrolling code.
 		var top_screen_limit = target_position_y - 100
