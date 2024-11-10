@@ -29,9 +29,9 @@ var floor_h_velocity: float = 0.0
 
 var airborne_time: float = 1e20
 
-@onready var sound_jump := $SoundJump as AudioStreamPlayer2D
-@onready var sound_death := $SoundDeath as AudioStreamPlayer2D
-@onready var sound_shoot := $SoundShoot as AudioStreamPlayer2D
+@onready var sound_jump := $"Sound Jump" as AudioStreamPlayer2D
+@onready var sound_death := $"Sound Death" as AudioStreamPlayer2D
+@onready var sound_shoot := $"Sound Shoot" as AudioStreamPlayer2D
 @onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
 @onready var sprite_smoke := sprite.get_node(^"Smoke") as CPUParticles2D
 
