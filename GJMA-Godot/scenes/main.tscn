@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://assets/elements/death_boundary.gd" id="4_o75m3"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
 [ext_resource type="FontFile" uid="uid://qajlqo85qu0i" path="res://assets/fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="6_re5bf"]
+[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5yykk"]
 
@@ -97,4 +98,8 @@ text = "[center]P4[/center]"
 
 [node name="Level" parent="." instance=ExtResource("4_81fgx")]
 z_index = -1
-position = Vector2(111, 161)
+position = Vector2(111, -496)
+
+[node name="Pause" parent="." instance=ExtResource("7_2uwbc")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
