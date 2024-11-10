@@ -37,7 +37,6 @@ func _set_progress(value:float):
 	elif (value < 100) :
 		dawn.modulate.a = 1.0 - (value - 66) / 33
 		night.modulate.a = (value - 66) / 33
-	
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

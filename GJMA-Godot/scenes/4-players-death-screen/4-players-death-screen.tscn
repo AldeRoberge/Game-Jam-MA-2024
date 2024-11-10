@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://oehrl8ntuxvm"]
+
+[ext_resource type="Texture2D" uid="uid://bglfh77lkb3jc" path="res://assets/sprites/elements/background-outline.png" id="1_2l6t7"]
+[ext_resource type="Texture2D" uid="uid://baevdhsspvife" path="res://assets/sprites/players/p1/player-face.png" id="1_e3s8g"]
+[ext_resource type="Texture2D" uid="uid://4lyq8mln2l0f" path="res://assets/sprites/players/p2/player2-face.png" id="2_o8fyt"]
+[ext_resource type="FontFile" uid="uid://dh5v0dn3tssco" path="res://assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_qbrnr"]
+[ext_resource type="Texture2D" uid="uid://bmpsg3cgkss0r" path="res://assets/sprites/players/p3/player3-face.png" id="3_prxpu"]
+[ext_resource type="Texture2D" uid="uid://cw2hdxs42p53p" path="res://assets/sprites/players/p4/player4-face.png" id="4_j4lyr"]
+
+[node name="4-players-death-screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(653, 200)
+scale = Vector2(0.33, 10)
+texture = ExtResource("1_2l6t7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(662, 117)
+scale = Vector2(2, 2)
+texture = ExtResource("1_e3s8g")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Sprite2D"]
+modulate = Color(0, 0.733333, 1, 1)
+texture_filter = 1
+offset_left = -36.5
+offset_top = 37.0
+offset_right = 34.5
+offset_bottom = 68.0
+theme_override_fonts/normal_font = ExtResource("2_qbrnr")
+theme_override_font_sizes/italics_font_size = 1
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Mada[/center]"
+
+[node name="Player2-face" type="Sprite2D" parent="."]
+position = Vector2(663, 369)
+scale = Vector2(2, 2)
+texture = ExtResource("2_o8fyt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player2-face"]
+modulate = Color(1, 0, 0, 1)
+texture_filter = 1
+offset_left = -42.0
+offset_top = 34.5
+offset_right = 36.0
+offset_bottom = 64.5
+theme_override_fonts/normal_font = ExtResource("2_qbrnr")
+theme_override_font_sizes/italics_font_size = 1
+theme_override_font_sizes/mono_font_size = 22
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Vitalen[/center]"
+
+[node name="Player3-face" type="Sprite2D" parent="."]
+position = Vector2(652, 625)
+scale = Vector2(2, 2)
+texture = ExtResource("3_prxpu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player3-face"]
+modulate = Color(0.808835, 0.140885, 1, 1)
+texture_filter = 1
+offset_left = -32.5
+offset_top = 34.0
+offset_right = 28.5
+offset_bottom = 64.0
+theme_override_fonts/normal_font = ExtResource("2_qbrnr")
+theme_override_font_sizes/italics_font_size = 1
+theme_override_font_sizes/mono_font_size = 22
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Lifex[/center]"
+
+[node name="Player4-face" type="Sprite2D" parent="."]
+position = Vector2(649, 864)
+scale = Vector2(2, 2)
+texture = ExtResource("4_j4lyr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Player4-face"]
+modulate = Color(0.360784, 0.988235, 0, 1)
+texture_filter = 1
+offset_left = -51.0
+offset_top = 34.0
+offset_right = 48.0
+offset_bottom = 63.0
+theme_override_fonts/normal_font = ExtResource("2_qbrnr")
+theme_override_font_sizes/italics_font_size = 1
+theme_override_font_sizes/mono_font_size = 22
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "[center]Almidéphi[/center]"
