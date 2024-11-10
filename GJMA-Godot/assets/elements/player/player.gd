@@ -220,6 +220,10 @@ func _get_input_joy_left() -> Vector2:
 
 # kills the player
 func _kill_player() -> void:
+	# fix so that we dont hear the sound twice or more
+	if (_is_dead): 
+		return
+	
 	# Log the player's death.
 	print("Player " + str(device_id + 1) + " has died.")
 	sound_death.play()
