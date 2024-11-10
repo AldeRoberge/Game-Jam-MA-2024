@@ -64,6 +64,14 @@ func _ready() -> void:
 	_update_player_texture(player3, playersFaces[2], player3_alive, player3_dead)
 	_update_player_texture(player4, playersFaces[3], player4_alive, player4_dead)
 
+func _process(delta: float) -> void:
+	for i in range(playersScores.size()):
+		playersScores[i].text = "[center]P1[/center]\n[center]" + \
+		str(Global.player_scores[i]) + \
+		"/" + \
+		str(Global.MAX_PLAYER_SCORE) + \
+		"[/center]"
+
 # Helper function to update texture based on player's alive status
 func _update_player_texture(player: Player, texture_rect: TextureRect, alive_texture: Texture, dead_texture: Texture) -> void:
 	if !player._is_dead:
