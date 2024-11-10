@@ -75,9 +75,10 @@ text = "[center]P4[/center]"
 
 [node name="Music" parent="." instance=ExtResource("4_3pckw")]
 
-[node name="CameraBackground" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_gxjgc")]
-position = Vector2(119, 430)
-zoom = Vector2(3, 3)
+[node name="CameraBackground" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_84hq8")]
+position = Vector2(110, 407)
+zoom = Vector2(4, 4)
+max_scroll_speed = 0.819
 player1 = NodePath("../Player 1")
 player2 = NodePath("../Player 2")
 player3 = NodePath("../Player 3")
