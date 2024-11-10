@@ -66,6 +66,3 @@ damping_max = 5.0
 scale_amount_min = 2.0
 scale_amount_max = 5.0
 color_ramp = SubResource("Gradient_870ih")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(124, -3650)
