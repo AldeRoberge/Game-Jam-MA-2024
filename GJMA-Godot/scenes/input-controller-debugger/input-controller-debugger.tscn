@@ -95,7 +95,7 @@ theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]XInput Gamepad[/center]"
+text = "[center]Nintendo Switch Controller[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player-idle" type="Sprite2D" parent="Control"]
@@ -216,7 +216,7 @@ theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]XInput Gamepad[/center]"
+text = "[center][/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player2-ilde" type="Sprite2D" parent="Control2"]

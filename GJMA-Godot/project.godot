@@ -20,6 +20,10 @@ run/main_scene="res://scenes/input-controller-debugger/input-controller-debugger
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.webp"
 
+[autoload]
+
+Global="*res://scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=1920

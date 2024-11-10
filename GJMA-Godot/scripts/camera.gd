@@ -69,4 +69,15 @@ func _process(delta: float) -> void:
 		
 		#smoothly move the camera to the highest player position
 		position.y = lerp(position.y, target_position_y, 0.01)
+		
+		var player_alive_count = 0
+		for player in players:
+			if is_instance_valid(player) and not player._is_dead:
+				player_alive_count += 1
+		
+		player_alive_count == 1
+		for i in range(players.size()):
+			if is_instance_valid(players[i]) && !players[i]._is_dead:
+				Global.add_score_to_player(i)
+
 	pass
