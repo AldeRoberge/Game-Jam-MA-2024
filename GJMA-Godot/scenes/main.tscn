@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=9 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cnfr7ji6id3h8" path="res://assets/tilesets/level.tscn" id="4_81fgx"]
 [ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_kxrjt"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
+[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5yykk"]
 
@@ -88,4 +89,8 @@ text = "[center]P4[/center]"
 
 [node name="Level" parent="." instance=ExtResource("4_81fgx")]
 z_index = -1
-position = Vector2(111, 161)
+position = Vector2(111, -496)
+
+[node name="Pause" parent="." instance=ExtResource("7_2uwbc")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
