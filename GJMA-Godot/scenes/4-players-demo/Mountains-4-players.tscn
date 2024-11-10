@@ -82,7 +82,7 @@ text = "[center]P4[/center]"
 
 [node name="CameraBackground" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_84hq8")]
 position = Vector2(110, 407)
-zoom = Vector2(2.25, 2.25)
+zoom = Vector2(4, 4)
 max_scroll_speed = 0.819
 player1 = NodePath("../Player 1")
 player2 = NodePath("../Player 2")

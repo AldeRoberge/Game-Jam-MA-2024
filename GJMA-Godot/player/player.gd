@@ -23,6 +23,7 @@ var siding_left := false
 var jumping := false
 var can_double_jump := false
 var stopping_jump := false
+var old_jump = null
 
 var floor_h_velocity: float = 0.0
 
@@ -111,7 +112,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			velocity.x = signf(velocity.x) * xv
 
 		# Check jump.
-		if not jumping and jump:
+		if not jumping and jump and old_jump != jump:
 			can_double_jump = true
 			velocity = _do_jump(velocity)
 
@@ -120,15 +121,13 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			new_siding_left = true
 		elif velocity.x > 0 and move_right:
 			new_siding_left = false
-		if jumping:
-			new_anim = _get_player_id() + "jump"
-		elif absf(velocity.x) < 0.1:	
+		if absf(velocity.x) < 0.1:
 			new_anim = _get_player_id() + "idle"
 		else:
 			new_anim = _get_player_id() + "walk"
 	else:
 		# Check double jump
-		if can_double_jump and jump:
+		if can_double_jump and jump and old_jump != jump:
 			can_double_jump = false
 			velocity = _do_jump(velocity)
 		
@@ -147,10 +146,10 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 				xv = 0
 			velocity.x = signf(velocity.x) * xv
 
-		if velocity.y < 0:
-			new_anim = _get_player_id() + "jump"
-		else:
+		if velocity.y > 0:
 			new_anim = _get_player_id() + "fall"
+		elif velocity.y < 0:
+			new_anim = _get_player_id() + "idle"
 
 	# Update siding.
 	if new_siding_left != siding_left:
@@ -174,6 +173,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	# Finally, apply gravity and set back the linear velocity.
 	velocity += state.get_total_gravity() * step
 	state.set_linear_velocity(velocity)
+	
+	old_jump = jump
 
 
 func _spawn_enemy_above() -> void:
