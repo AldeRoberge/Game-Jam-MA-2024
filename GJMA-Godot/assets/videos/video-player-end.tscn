@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://bdx13wt8l44o5"]
+
+[ext_resource type="Script" path="res://assets/videos/video_player_end.gd" id="1_ys568"]
+[ext_resource type="PackedScene" uid="uid://g3yq6kldorfv" path="res://scenes/input-controller-debugger/input-controller-debugger.tscn" id="2_ai60l"]
+[ext_resource type="VideoStream" path="res://assets/videos/p1-end.ogv" id="3_qqps4"]
+[ext_resource type="Texture2D" uid="uid://bpm27mbbskqrn" path="res://assets/sprites/gui/background.png" id="3_xrqov"]
+[ext_resource type="SpriteFrames" uid="uid://blhh84f5p5tge" path="res://assets/sprites/loading-circle.tres" id="4_jfiaq"]
+[ext_resource type="VideoStream" path="res://assets/videos/p2-end.ogv" id="4_obpv2"]
+[ext_resource type="VideoStream" path="res://assets/videos/output-new.ogv" id="5_k0cua"]
+[ext_resource type="VideoStream" path="res://assets/videos/p3-end.ogv" id="5_m60p5"]
+[ext_resource type="VideoStream" path="res://assets/videos/p4-end.ogv" id="6_rc0sn"]
+
+[node name="Video-player-end" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ys568")
+next_scene = ExtResource("2_ai60l")
+end_videos = Array[VideoStream]([ExtResource("3_qqps4"), ExtResource("4_obpv2"), ExtResource("5_m60p5"), ExtResource("6_rc0sn")])
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_xrqov")
+expand_mode = 1
+
+[node name="LoadingCircle" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = -80.0
+offset_bottom = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LoadingCircle"]
+scale = Vector2(10, 10)
+sprite_frames = ExtResource("4_jfiaq")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CenterContainer"]
+custom_minimum_size = Vector2(1440, 1080)
+layout_mode = 2
+stream = ExtResource("5_k0cua")
+expand = true
