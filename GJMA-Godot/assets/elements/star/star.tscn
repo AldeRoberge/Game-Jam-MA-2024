@@ -105,5 +105,6 @@ gravity = Vector2(0, 0)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_nwn8d")
+volume_db = 4.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
