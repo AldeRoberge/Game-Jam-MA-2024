@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_kxrjt"]
 [ext_resource type="Script" path="res://assets/elements/death_boundary.gd" id="4_o75m3"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
-[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
+[ext_resource type="PackedScene" uid="uid://bvnbvi20aov5j" path="res://scenes/pause.tscn" id="7_2uwbc"]
 [ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="7_dw1cv"]
 [ext_resource type="PackedScene" uid="uid://jmcy3mp81yh1" path="res://assets/elements/star/sprites/star.tscn" id="9_pctem"]
 [ext_resource type="PackedScene" uid="uid://0ona0rxec3dw" path="res://assets/elements/screen-death/screen-death.tscn" id="10_nbsak"]
@@ -24,12 +24,15 @@ player3 = NodePath("../../Players/Player 3")
 player4 = NodePath("../../Players/Player 4")
 
 [node name="Death Screen" parent="Menu Canvas" instance=ExtResource("10_nbsak")]
+visible = false
 
 [node name="Music" parent="." instance=ExtResource("3_qifk4")]
 
 [node name="Camera" parent="." node_paths=PackedStringArray("players") instance=ExtResource("4_kxrjt")]
-position = Vector2(222, 499)
-zoom = Vector2(2.5, 2.5)
+position = Vector2(213, 517)
+zoom = Vector2(2.75, 2.75)
+max_scroll_speed = 0.9
+time_to_night_seconds = 70.0
 players = [NodePath("../Players/Player 1"), NodePath("../Players/Player 2"), NodePath("../Players/Player 3"), NodePath("../Players/Player 4")]
 
 [node name="DeathBoundary" type="Area2D" parent="Camera"]
