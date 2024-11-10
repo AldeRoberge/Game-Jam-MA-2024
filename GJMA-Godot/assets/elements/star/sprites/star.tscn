@@ -67,6 +67,7 @@ _data = {
 }
 
 [node name="Star" type="Node2D"]
+script = ExtResource("5_s67li")
 
 [node name="Particles" type="CPUParticles2D" parent="."]
 emission_shape = 1

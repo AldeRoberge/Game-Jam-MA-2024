@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bio1crwbvrmc2" path="res://assets/elements/coin/coin.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://c6to5lo1o35v" path="res://assets/audio/Coin 2.wav" id="3_lg44i"]
 
+[sub_resource type="CircleShape2D" id="3"]
+radius = 5.0
+
 [sub_resource type="Animation" id="1"]
 resource_name = "spin"
 length = 0.5
@@ -46,7 +49,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [true]
 }
 tracks/2/type = "method"
@@ -94,9 +97,6 @@ _data = {
 "taken": SubResource("2")
 }
 
-[sub_resource type="CircleShape2D" id="3"]
-radius = 5.0
-
 [sub_resource type="CanvasItemMaterial" id="4"]
 blend_mode = 1
 
@@ -107,9 +107,8 @@ point_count = 3
 [node name="Coin" type="Area2D"]
 script = ExtResource("1_74pv4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2")
-hframes = 4
+[node name="Collision Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -117,8 +116,9 @@ libraries = {
 }
 autoplay = "spin"
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("3")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+hframes = 4
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_lg44i")
