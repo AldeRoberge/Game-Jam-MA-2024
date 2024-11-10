@@ -34,7 +34,6 @@ var airborne_time: float = 1e20
 @onready var sound_shoot := $SoundShoot as AudioStreamPlayer2D
 @onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
 @onready var sprite_smoke := sprite.get_node(^"Smoke") as CPUParticles2D
-@onready var bullet_shoot := $BulletShoot as Marker2D
 
 
 
