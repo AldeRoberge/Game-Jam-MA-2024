@@ -1,12 +1,10 @@
 extends Camera2D
 
-
 # A reference to the player #1
 @export var player1: Player
 @export var player2: Player
 @export var player3: Player
 @export var player4: Player
-
 
 # Move the camera every frame to the highest player position. Dont move the horizontal axis.
 

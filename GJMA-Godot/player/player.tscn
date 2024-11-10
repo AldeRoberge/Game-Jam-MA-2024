@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://player/player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://7sv64orewgmb" path="res://player/bullet.png" id="3"]
+[ext_resource type="AudioStream" uid="uid://byb5cjdwaqbvh" path="res://audio/Jump 4.wav" id="5_o84ox"]
 [ext_resource type="SpriteFrames" uid="uid://b781bvn1upjuy" path="res://assets/sprites/players/player-sprite-frames.tres" id="6_3pb50"]
 [ext_resource type="AudioStream" uid="uid://gw2a4ii0oby2" path="res://audio/sound_shoot.wav" id="8"]
-[ext_resource type="AudioStream" uid="uid://bpyko2i13mj0v" path="res://audio/sound_jump.wav" id="9"]
 
 [sub_resource type="PhysicsMaterial" id="1"]
 friction = 0.0
@@ -90,4 +90,4 @@ visibility_mode = 1
 stream = ExtResource("8")
 
 [node name="SoundJump" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("9")
+stream = ExtResource("5_o84ox")
