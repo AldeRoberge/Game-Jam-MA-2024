@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=5 format=4 uid="uid://b6n2opy1im2t6"]
 
-[ext_resource type="TileSet" uid="uid://ct2u4e4tics1j" path="res://tilesets/Tiles.tres" id="2_1s4wu"]
-[ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://player/player.tscn" id="3_qb575"]
+[ext_resource type="TileSet" uid="uid://ct2u4e4tics1j" path="res://assets/tilesets/Tiles.tres" id="2_1s4wu"]
+[ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="3_qb575"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player/music-player.tscn" id="4_3pckw"]
-[ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="5_gxjgc"]
-[ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/4-players-death-screen/4-players-death-screen.tscn" id="6_okji3"]
+[ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_6pfig"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -75,18 +74,10 @@ text = "[center]P4[/center]"
 
 [node name="Music" parent="." instance=ExtResource("4_3pckw")]
 
-[node name="CameraBackground" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_84hq8")]
-position = Vector2(110, 407)
-zoom = Vector2(4, 4)
-max_scroll_speed = 0.819
+[node name="CameraBackground" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("4_6pfig")]
+position = Vector2(222, 499)
+zoom = Vector2(2.5, 2.5)
 player1 = NodePath("../Player 1")
 player2 = NodePath("../Player 2")
 player3 = NodePath("../Player 3")
 player4 = NodePath("../Player 4")
-
-[node name="4-players-death-screen" parent="CameraBackground" instance=ExtResource("6_okji3")]
-offset_left = -444.0
-offset_top = -135.0
-offset_right = -444.0
-offset_bottom = -135.0
-scale = Vector2(0.25, 0.25)
