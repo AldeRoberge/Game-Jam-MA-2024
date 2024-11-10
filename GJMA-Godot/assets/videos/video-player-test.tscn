@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpsdi3y6igybs"]
+[gd_scene load_steps=6 format=3 uid="uid://dpsdi3y6igybs"]
 
+[ext_resource type="Script" path="res://assets/videos/video_player_test.gd" id="1_s7tdd"]
 [ext_resource type="VideoStream" path="res://assets/videos/output-new.ogv" id="1_tg3aq"]
+[ext_resource type="PackedScene" uid="uid://b6n2opy1im2t6" path="res://scenes/main.tscn" id="2_wegfp"]
+[ext_resource type="SpriteFrames" uid="uid://blhh84f5p5tge" path="res://assets/sprites/loading-circle.tres" id="3_1mc6m"]
+[ext_resource type="Texture2D" uid="uid://bpm27mbbskqrn" path="res://assets/sprites/gui/background.png" id="4_xwa0p"]
 
 [node name="Video-player-test" type="Control"]
 layout_mode = 3
@@ -9,14 +13,47 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_s7tdd")
+next_scene = ExtResource("2_wegfp")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("4_xwa0p")
+expand_mode = 1
+
+[node name="LoadingCircle" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+offset_right = -80.0
+offset_bottom = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LoadingCircle"]
+scale = Vector2(10, 10)
+sprite_frames = ExtResource("3_1mc6m")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CenterContainer"]
+custom_minimum_size = Vector2(1440, 1080)
+layout_mode = 2
 stream = ExtResource("1_tg3aq")
 autoplay = true
 expand = true
