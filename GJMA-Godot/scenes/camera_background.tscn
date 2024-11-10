@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bynl2kn8a7vtw"]
+
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_vt5b6"]
+[ext_resource type="Texture2D" uid="uid://dnyip385fac50" path="res://background/dawn/Layer 1.png" id="2_uyp0f"]
+[ext_resource type="Texture2D" uid="uid://baxwc71w4ay56" path="res://background/Night/Layer 1.png" id="3_nehut"]
+[ext_resource type="Texture2D" uid="uid://cv27rdskmx1x4" path="res://background/Nightfall/Layer 1.png" id="4_i00mc"]
+[ext_resource type="Texture2D" uid="uid://dlavnhmoglrr0" path="res://background/Sunset/Layer 1.png" id="5_4253c"]
+
+[node name="CameraBackground" type="Camera2D"]
+position = Vector2(100, 0)
+script = ExtResource("1_vt5b6")
+
+[node name="Dawn" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_uyp0f")
+
+[node name="Night" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_nehut")
+
+[node name="Nightfall" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_i00mc")
+
+[node name="Sunset" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_4253c")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 100.0
+one_shot = true
