@@ -3,6 +3,12 @@ extends Node2D
 @export var max_scroll_speed := 1.0
 @export var time_to_night_seconds := 60.0
 
+# A reference to the player #1
+@export var player1: Player
+@export var player2: Player
+@export var player3: Player
+@export var player4: Player
+
 @onready var sunset := $Sunset as Sprite2D
 @onready var nightfall := $Nightfall as Sprite2D
 @onready var dawn := $Dawn as Sprite2D
@@ -10,6 +16,7 @@ extends Node2D
 @onready var timer := $Timer as Timer
 
 var progress := 0
+@onready var target_position_y := self.position.y
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,7 +42,20 @@ func _set_progress(value:float):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var top_screen_limit = target_position_y - 100
+	if player1.position.y < top_screen_limit:
+		target_position_y = player1.position.y
+	if player2.position.y < top_screen_limit:
+		target_position_y = player2.position.y
+	if player3.position.y < top_screen_limit:
+		target_position_y = player3.position.y
+	if player4.position.y < top_screen_limit:
+		target_position_y = player4.position.y
+
 	var progress = (1.0 - timer.time_left / timer.wait_time) * 100
 	_set_progress(progress)
-	self.position.y -= max_scroll_speed * delta * progress
+	target_position_y -= max_scroll_speed * delta * progress
+	
+	#smoothly move the camera to the highest player position
+	position.y = lerp(position.y, target_position_y, 0.01)
 	pass

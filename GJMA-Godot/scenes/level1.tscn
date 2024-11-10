@@ -8,4 +8,4 @@
 [node name="Node2D" parent="." instance=ExtResource("1_2morl")]
 
 [node name="CameraBackground" parent="." instance=ExtResource("2_112lh")]
-time_to_night_seconds = 20.0
+position = Vector2(100, 200)
