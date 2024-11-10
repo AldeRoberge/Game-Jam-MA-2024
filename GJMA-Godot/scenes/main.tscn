@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_kxrjt"]
 [ext_resource type="Script" path="res://assets/elements/death_boundary.gd" id="4_o75m3"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
-[ext_resource type="PackedScene" path="res://scenes/pause.tscn" id="7_2uwbc"]
+[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 [ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="7_dw1cv"]
 [ext_resource type="PackedScene" uid="uid://jmcy3mp81yh1" path="res://assets/elements/star/sprites/star.tscn" id="9_pctem"]
 
