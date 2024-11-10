@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=10 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
@@ -23,13 +23,10 @@ player4 = NodePath("../../Players/Player 4")
 
 [node name="Music" parent="." instance=ExtResource("3_qifk4")]
 
-[node name="Camera" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("4_kxrjt")]
+[node name="Camera" parent="." node_paths=PackedStringArray("players") instance=ExtResource("4_kxrjt")]
 position = Vector2(222, 499)
 zoom = Vector2(2.5, 2.5)
-player1 = NodePath("../Players/Player 1")
-player2 = NodePath("../Players/Player 2")
-player3 = NodePath("../Players/Player 3")
-player4 = NodePath("../Players/Player 4")
+players = [NodePath("../Players/Player 1"), NodePath("../Players/Player 2"), NodePath("../Players/Player 3"), NodePath("../Players/Player 4")]
 
 [node name="DeathBoundary" type="Area2D" parent="Camera"]
 position = Vector2(0, 215)
