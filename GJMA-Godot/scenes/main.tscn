@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=13 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_kxrjt"]
 [ext_resource type="Script" path="res://assets/elements/death_boundary.gd" id="4_o75m3"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
-[ext_resource type="PackedScene" uid="uid://bvnbvi20aov5j" path="res://scenes/pause.tscn" id="7_2uwbc"]
+[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 [ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="7_dw1cv"]
+[ext_resource type="PackedScene" uid="uid://6uilf6rad880" path="res://assets/elements/coin/coin.tscn" id="8_d6v6a"]
 [ext_resource type="PackedScene" uid="uid://jmcy3mp81yh1" path="res://assets/elements/star/sprites/star.tscn" id="9_pctem"]
 [ext_resource type="PackedScene" uid="uid://0ona0rxec3dw" path="res://assets/elements/screen-death/screen-death.tscn" id="10_nbsak"]
 
@@ -16,6 +17,7 @@
 [node name="Main Level" type="Node2D"]
 
 [node name="Menu Canvas" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Menu Player" parent="Menu Canvas" node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_slmj3")]
 player1 = NodePath("../../Players/Player 1")
@@ -157,4 +159,18 @@ position = Vector2(111, -496)
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
 
 [node name="Star" parent="." instance=ExtResource("9_pctem")]
-position = Vector2(186, 632)
+position = Vector2(203, 638)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(243, 426)
+script = null
+
+[node name="Coin2" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(95, 410)
+script = null
+
+[node name="Coin3" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(64, 653)
+script = null
