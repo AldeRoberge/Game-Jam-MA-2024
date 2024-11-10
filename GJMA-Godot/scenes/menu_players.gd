@@ -38,6 +38,7 @@ extends Control
 	$"Scores/Player 4 Score"
 ]
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(playersTexts.size()):
@@ -45,6 +46,7 @@ func _ready() -> void:
 			playersFaces[i].hide()
 			playersTexts[i].hide()
 			playersScores[i].hide()
+	
 	
 	# Connect death signals to corresponding methods
 	
@@ -72,15 +74,35 @@ func _update_player_texture(player: Player, texture_rect: TextureRect, alive_tex
 # Signal handler for player 1's death
 func _on_player1_dead() -> void:
 	playersFaces[0].texture = player1_dead
+	_blink_texture(playersFaces[0])
+	
 
 # Signal handler for player 2's death
 func _on_player2_dead() -> void:
 	playersFaces[1].texture = player2_dead
+	_blink_texture(playersFaces[1])
 
 # Signal handler for player 3's death
 func _on_player3_dead() -> void:
 	playersFaces[2].texture = player3_dead
+	_blink_texture(playersFaces[2])
 
 # Signal handler for player 4's death
 func _on_player4_dead() -> void:
 	playersFaces[3].texture = player4_dead
+	_blink_texture(playersFaces[3])
+	
+# Blink animation function
+# Blink animation function
+func _blink_texture(texture_rect: TextureRect) -> void:
+	# Create a tween and add it as a child to ensure it doesn't get garbage-collected
+	var blink_tween = create_tween()
+	
+	# Animate the alpha to 0 (invisible) and back to 1 (fully visible) for a blinking effect
+	blink_tween.tween_property(texture_rect, "modulate", Color(1, 1, 1, 0), 0.25).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	blink_tween.tween_property(texture_rect, "modulate", Color(1, 1, 1, 1), 0.25).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	blink_tween.tween_property(texture_rect, "modulate", Color(1, 1, 1, 1), 0.25).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	blink_tween.tween_property(texture_rect, "modulate", Color(1, 1, 1, 1), 0.25).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	blink_tween.tween_property(texture_rect, "modulate", Color(1, 1, 1, 1), 0.25).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	blink_tween.tween_property(texture_rect, "modulate", Color(1, 1, 1, 1), 0.25).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	

@@ -5,6 +5,8 @@ extends TextureRect
 @export var fade_speed: float = 0.5
 @export var image: TextureRect
 
+
+
 var fade_in = false
 
 func _ready():

@@ -6,6 +6,8 @@ extends Area2D
 @export var sound: AudioStreamPlayer2D
 @export var fade_to_white: FadeToWhite
 
+
+
 func _on_body_entered(body: Node2D) -> void:
 	print("STAR Collided with " + str(body))
 	if body is Player:
