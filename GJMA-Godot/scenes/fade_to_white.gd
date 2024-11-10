@@ -7,9 +7,15 @@ extends TextureRect
 
 var fade_in = false
 
+func _ready():
+	image.modulate.a = 0
+	pass
+
 func _process(delta):
 	if fade_in:
 		image.modulate.a += fade_speed * delta
+	pass
 
 func fade():
 	fade_in = true
+	pass

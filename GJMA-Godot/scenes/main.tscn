@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=17 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="Texture2D" uid="uid://bkpb2w8np002m" path="res://assets/sprites/gui/white.png" id="3_k3t2r"]
@@ -35,6 +35,7 @@ player4 = NodePath("../../Players/Player 4")
 visible = false
 
 [node name="Fade to White" type="TextureRect" parent="Menu Canvas" node_paths=PackedStringArray("image")]
+process_mode = 3
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -283,5 +284,6 @@ position = Vector2(301, -4413)
 
 [node name="Star" parent="." node_paths=PackedStringArray("music", "fade_to_white") instance=ExtResource("11_slc2i")]
 process_mode = 3
+position = Vector2(164, -4738)
 music = NodePath("../Music")
 fade_to_white = NodePath("../Menu Canvas/Fade to White")
