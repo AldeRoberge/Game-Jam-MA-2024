@@ -42,11 +42,6 @@ spread = 65.84
 gravity = Vector2(0, -15)
 color_ramp = SubResource("2")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-limit_left = 0
-limit_top = 0
-
 [node name="BulletShoot" type="Marker2D" parent="."]
 position = Vector2(15, 2)
 
