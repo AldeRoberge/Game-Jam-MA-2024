@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://assets/elements/coin/coin.gd" id="1_74pv4"]
 [ext_resource type="Texture2D" uid="uid://bio1crwbvrmc2" path="res://assets/elements/coin/coin.png" id="2"]
-[ext_resource type="AudioStream" uid="uid://cy7lxrapbqu1r" path="res://assets/audio/sound_coin.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://c6to5lo1o35v" path="res://assets/audio/Coin 2.wav" id="3_lg44i"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "spin"
@@ -121,7 +121,7 @@ autoplay = "spin"
 shape = SubResource("3")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3")
+stream = ExtResource("3_lg44i")
 
 [node name="GPUParticles3D" type="CPUParticles2D" parent="."]
 modulate = Color(0.596078, 0.639216, 1, 1)
