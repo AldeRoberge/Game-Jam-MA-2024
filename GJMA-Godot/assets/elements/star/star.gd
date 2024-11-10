@@ -11,6 +11,9 @@ extends Area2D
 func _on_body_entered(body: Node2D) -> void:
 	print("STAR Collided with " + str(body))
 	if body is Player:
+		
+		Global.add_score_to_player(body.device_id)
+		
 		print("2222222222222")
 		#($AnimationPlayer as AnimationPlayer).play("taken")
 		sound.play()
