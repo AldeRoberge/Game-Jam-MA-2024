@@ -29,13 +29,11 @@ var floor_h_velocity: float = 0.0
 
 var airborne_time: float = 1e20
 
-
 @onready var sound_jump := $SoundJump as AudioStreamPlayer2D
+@onready var sound_death := $SoundDeath as AudioStreamPlayer2D
 @onready var sound_shoot := $SoundShoot as AudioStreamPlayer2D
 @onready var sprite := $AnimatedSprite2D as AnimatedSprite2D
 @onready var sprite_smoke := sprite.get_node(^"Smoke") as CPUParticles2D
-
-
 
 
 func _do_jump(velocity: Vector2) -> Vector2:
@@ -210,6 +208,13 @@ func _get_input_dpad_down() -> bool: return Input.is_joy_button_pressed(device_i
 # get the joystick input
 func _get_input_joy_left() -> Vector2:
 	return Vector2(Input.get_joy_axis(device_id, JOY_AXIS_LEFT_X), Input.get_joy_axis(device_id, JOY_AXIS_LEFT_Y))
+
+
+# kills the player
+func _kill_player() -> void:
+	sound_death.play()
+	queue_free()
+
 
 # Get the jump input (any face button)
 func _get_input_jump() -> bool:

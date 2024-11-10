@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://oehrl8ntuxvm"]
+[gd_scene load_steps=9 format=3 uid="uid://oehrl8ntuxvm"]
 
 [ext_resource type="Script" path="res://scenes/menu_players.gd" id="1_5e7na"]
 [ext_resource type="Texture2D" uid="uid://baevdhsspvife" path="res://assets/sprites/players/p1/player-face.png" id="1_e3s8g"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4lyq8mln2l0f" path="res://assets/sprites/players/p2/player2-face.png" id="2_o8fyt"]
 [ext_resource type="FontFile" uid="uid://dh5v0dn3tssco" path="res://assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_qbrnr"]
 [ext_resource type="Texture2D" uid="uid://bmpsg3cgkss0r" path="res://assets/sprites/players/p3/player3-face.png" id="3_prxpu"]
+[ext_resource type="FontFile" uid="uid://mwwdxg5qau56" path="res://assets/fonts/Tiny5/Tiny5-Regular.ttf" id="3_q46y0"]
 [ext_resource type="Texture2D" uid="uid://cw2hdxs42p53p" path="res://assets/sprites/players/p4/player4-face.png" id="4_j4lyr"]
 
 [node name="Menu Players" type="Control"]
@@ -24,16 +25,69 @@ offset_bottom = 1080.0
 scale = Vector2(0.251, 5.75)
 texture = ExtResource("2_10mbo")
 
-[node name="Score" type="RichTextLabel" parent="."]
+[node name="Scores" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Padding" type="RichTextLabel" parent="Scores"]
 modulate = Color(0, 0.733333, 1, 1)
 z_index = 10
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 0
-offset_left = 1670.0
-offset_right = 1710.0
-offset_bottom = 40.0
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_q46y0")
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
-text = "[center]00000[/center]"
+
+[node name="Player 1 Score" type="RichTextLabel" parent="Scores"]
+modulate = Color(0, 0.733333, 1, 1)
+z_index = 10
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_q46y0")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]P1[/center]
+[center]00000[/center]"
+
+[node name="Player 2 Score" type="RichTextLabel" parent="Scores"]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_q46y0")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]P2[/center]
+[center]00000[/center]"
+
+[node name="Player 3 Score" type="RichTextLabel" parent="Scores"]
+modulate = Color(0.513726, 0.188235, 0.729412, 1)
+z_index = 10
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_q46y0")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]P3[/center]
+[center]00000[/center]"
+
+[node name="Player 4 Score" type="RichTextLabel" parent="Scores"]
+modulate = Color(0.435294, 0.560784, 0.266667, 1)
+z_index = 10
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_q46y0")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]P4[/center]
+[center]00000[/center]"
 
 [node name="Background Panel Right" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.913725)
@@ -44,7 +98,7 @@ offset_bottom = 1080.0
 scale = Vector2(0.251, 5.75)
 texture = ExtResource("2_10mbo")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Heads" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -52,13 +106,13 @@ offset_right = 250.0
 grow_vertical = 2
 alignment = 1
 
-[node name="Player 1 Face" type="TextureRect" parent="VBoxContainer"]
+[node name="Player 1 Face" type="TextureRect" parent="Heads"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 texture = ExtResource("1_e3s8g")
 stretch_mode = 5
 
-[node name="Player 1 Text" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Player 1 Text" type="RichTextLabel" parent="Heads"]
 modulate = Color(0, 0.733333, 1, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(100, 80)
@@ -68,13 +122,13 @@ theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "[center]Mada[/center]"
 
-[node name="Player 2 Face" type="TextureRect" parent="VBoxContainer"]
+[node name="Player 2 Face" type="TextureRect" parent="Heads"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 texture = ExtResource("2_o8fyt")
 stretch_mode = 5
 
-[node name="Player 2 Text" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Player 2 Text" type="RichTextLabel" parent="Heads"]
 modulate = Color(1, 0, 0, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(100, 80)
@@ -84,13 +138,13 @@ theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "[center]Vitalen[/center]"
 
-[node name="Player 3 Face" type="TextureRect" parent="VBoxContainer"]
+[node name="Player 3 Face" type="TextureRect" parent="Heads"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 texture = ExtResource("3_prxpu")
 stretch_mode = 5
 
-[node name="Player 3 Text" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Player 3 Text" type="RichTextLabel" parent="Heads"]
 modulate = Color(0.808835, 0.140885, 1, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(100, 80)
@@ -100,13 +154,13 @@ theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "[center]Lifex[/center]"
 
-[node name="Player 4 Face" type="TextureRect" parent="VBoxContainer"]
+[node name="Player 4 Face" type="TextureRect" parent="Heads"]
 custom_minimum_size = Vector2(170, 170)
 layout_mode = 2
 texture = ExtResource("4_j4lyr")
 stretch_mode = 5
 
-[node name="Player 4 Text" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Player 4 Text" type="RichTextLabel" parent="Heads"]
 modulate = Color(0.360784, 0.988235, 0, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(120, 80)
