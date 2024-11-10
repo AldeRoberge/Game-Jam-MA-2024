@@ -4,6 +4,8 @@ extends Node2D
 @export var time_to_night_seconds := 60.0
 
 # A reference to the player #1
+@export var start_area: Area2D
+@export var start_top_limit: StaticBody2D
 @export var players: Array[Player]
 
 @onready var sunset := $Sunset as Sprite2D
@@ -11,6 +13,7 @@ extends Node2D
 @onready var dawn := $Dawn as Sprite2D
 @onready var night := $Night as Sprite2D
 @onready var timer := $Timer as Timer
+
 
 @onready var target_position_y := self.position.y
 
@@ -46,11 +49,12 @@ func _process(delta: float) -> void:
 		for i in range(players.size()):
 			if (Input.get_connected_joypads().size() > i
 				and is_instance_valid(players[i])
-				and players[i].position.y < min_start_position):
+				and start_area.get_overlapping_bodies().find(players[i]) != -1):
 				readyCount += 1
 		
 		if readyCount >= Input.get_connected_joypads().size():
 			timer.start(time_to_night_seconds)
+			start_top_limit.queue_free()
 			is_started = true
 	else:
 		# Thats the super scrolling code.
