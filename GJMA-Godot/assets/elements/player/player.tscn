@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbxsp4gp554vh"]
+[gd_scene load_steps=10 format=3 uid="uid://bbxsp4gp554vh"]
 
 [ext_resource type="Script" path="res://assets/elements/player/player.gd" id="1_xmrp7"]
 [ext_resource type="AudioStream" uid="uid://byb5cjdwaqbvh" path="res://assets/audio/Jump 4.wav" id="5_o84ox"]
@@ -14,6 +14,9 @@ colors = PackedColorArray(0.708353, 0.72498, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8b4o7"]
 radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pf4sb"]
+radius = 16.0312
 
 [node name="Player" type="RigidBody2D"]
 mass = 1.5
@@ -81,3 +84,8 @@ stream = ExtResource("5_o84ox")
 
 [node name="Sound Death" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_rjji2")
+
+[node name="Area 2D" type="Area2D" parent="."]
+
+[node name="Collision Shape" type="CollisionShape2D" parent="Area 2D"]
+shape = SubResource("CircleShape2D_pf4sb")

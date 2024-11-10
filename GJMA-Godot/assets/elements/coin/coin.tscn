@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://6uilf6rad880"]
+[gd_scene load_steps=10 format=3 uid="uid://6uilf6rad880"]
 
-[ext_resource type="Script" path="res://coin/coin.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://bio1crwbvrmc2" path="res://coin/coin.png" id="2"]
-[ext_resource type="AudioStream" uid="uid://cy7lxrapbqu1r" path="res://audio/sound_coin.wav" id="3"]
-[ext_resource type="Texture2D" uid="uid://7sv64orewgmb" path="res://player/bullet.png" id="4"]
+[ext_resource type="Script" path="res://assets/elements/coin/coin.gd" id="1_74pv4"]
+[ext_resource type="Texture2D" uid="uid://bio1crwbvrmc2" path="res://assets/elements/coin/coin.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://c6to5lo1o35v" path="res://assets/audio/Coin 2.wav" id="3_lg44i"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "spin"
@@ -106,7 +105,7 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.1, 1), 0.0, 0.0, 0, 0, Vector2
 point_count = 3
 
 [node name="Coin" type="Area2D"]
-script = ExtResource("1")
+script = ExtResource("1_74pv4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2")
@@ -122,7 +121,7 @@ autoplay = "spin"
 shape = SubResource("3")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3")
+stream = ExtResource("3_lg44i")
 
 [node name="GPUParticles3D" type="CPUParticles2D" parent="."]
 modulate = Color(0.596078, 0.639216, 1, 1)
@@ -131,7 +130,6 @@ emitting = false
 lifetime = 0.4
 one_shot = true
 explosiveness = 0.7
-texture = ExtResource("4")
 emission_shape = 1
 emission_sphere_radius = 4.0
 gravity = Vector2(0, 0)

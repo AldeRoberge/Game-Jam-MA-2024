@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=13 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
 [ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 [ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="7_dw1cv"]
+[ext_resource type="PackedScene" uid="uid://6uilf6rad880" path="res://assets/elements/coin/coin.tscn" id="8_d6v6a"]
 [ext_resource type="PackedScene" uid="uid://jmcy3mp81yh1" path="res://assets/elements/star/sprites/star.tscn" id="9_pctem"]
 [ext_resource type="PackedScene" uid="uid://0ona0rxec3dw" path="res://assets/elements/screen-death/screen-death.tscn" id="10_nbsak"]
 
@@ -180,4 +181,96 @@ position = Vector2(111, -496)
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
 
 [node name="Star" parent="." instance=ExtResource("9_pctem")]
-position = Vector2(186, 632)
+position = Vector2(165, -4745)
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(243, 426)
+
+[node name="Coin2" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(95, 410)
+
+[node name="Coin3" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(64, 653)
+
+[node name="Coin4" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(231, 205)
+
+[node name="Coin5" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(357, 185)
+
+[node name="Coin6" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(16, 130)
+
+[node name="Coin7" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(205, -54)
+
+[node name="Coin8" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(341, -299)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(168, -473)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(69, -637)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(141, -832)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(293, -960)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(306, -1089)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(213, -1329)
+
+[node name="Coin15" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(205, -1487)
+
+[node name="Coin16" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(284, -1693)
+
+[node name="Coin17" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(172, -1888)
+
+[node name="Coin18" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(280, -2011)
+
+[node name="Coin19" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(261, -2251)
+
+[node name="Coin20" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(212, -2429)
+
+[node name="Coin21" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(165, -2674)
+
+[node name="Coin22" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(310, -2864)
+
+[node name="Coin23" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(316, -3135)
+
+[node name="Coin24" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(151, -3388)
+
+[node name="Coin25" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(331, -3666)
+
+[node name="Coin26" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(125, -3873)
+
+[node name="Coin27" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(169, -4096)
+
+[node name="Coin28" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(85, -4300)
+
+[node name="Coin29" parent="Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(301, -4413)
+
+[node name="Star2" parent="." instance=ExtResource("9_pctem")]
+position = Vector2(191, 526)
