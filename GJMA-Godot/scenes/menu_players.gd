@@ -66,7 +66,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	for i in range(playersScores.size()):
-		playersScores[i].text = "[center]P1[/center]\n[center]" + \
+		playersScores[i].text = "[center]P"+str(i+1)+"[/center]\n[center]" + \
 		str(Global.player_scores[i]) + \
 		"/" + \
 		str(Global.MAX_PLAYER_SCORE) + \

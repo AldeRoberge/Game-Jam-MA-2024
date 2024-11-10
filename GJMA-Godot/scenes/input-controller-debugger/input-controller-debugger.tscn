@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/input-controller-debugger/input-controller-debugger.gd" id="1_dni48"]
 [ext_resource type="Script" path="res://scenes/input-controller-debugger/input_controller_debugger_scene.gd" id="1_v63wx"]
-[ext_resource type="PackedScene" uid="uid://b6n2opy1im2t6" path="res://scenes/main.tscn" id="2_dv6d2"]
 [ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player1-idle.png" id="2_sm6n2"]
+[ext_resource type="PackedScene" uid="uid://dpsdi3y6igybs" path="res://assets/videos/video-player-test.tscn" id="2_upslr"]
 [ext_resource type="Texture2D" uid="uid://cwtu8k5qiw5n2" path="res://assets/sprites/players/p2/player2-ilde.png" id="3_nywmm"]
 [ext_resource type="Texture2D" uid="uid://1c4pifr67xk6" path="res://scenes/Background-5-2.png" id="3_taere"]
 [ext_resource type="TileSet" uid="uid://ct2u4e4tics1j" path="res://assets/tilesets/tiles.tres" id="4_k03me"]
@@ -31,7 +31,7 @@ cache/0/16/0/scale = 1.0
 position = Vector2(405, 337)
 scale = Vector2(2, 2)
 script = ExtResource("1_v63wx")
-next_scene = ExtResource("2_dv6d2")
+next_scene = ExtResource("2_upslr")
 
 [node name="Background-5-2" type="Sprite2D" parent="."]
 position = Vector2(220.137, 98.375)
@@ -144,7 +144,7 @@ text = "[center]Mada[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control"]
-modulate = Color(0.9, 0.9, 0.1, 1)
+modulate = Color(0.1, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
@@ -159,7 +159,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]WAITING[/center]"
+text = "[center]READY[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound Ready" type="AudioStreamPlayer2D" parent="Control"]
@@ -265,7 +265,7 @@ text = "[center]Vitalen[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control2"]
-modulate = Color(0.9, 0.9, 0.1, 1)
+modulate = Color(0.1, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
@@ -280,7 +280,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]WAITING[/center]"
+text = "[center]READY[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound Ready" type="AudioStreamPlayer2D" parent="Control2"]
@@ -388,7 +388,7 @@ text = "[center]Lifex[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control3"]
-modulate = Color(0.9, 0.9, 0.1, 1)
+modulate = Color(0.1, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
@@ -403,7 +403,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]WAITING[/center]"
+text = "[center]READY[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound Ready" type="AudioStreamPlayer2D" parent="Control3"]
@@ -462,7 +462,7 @@ theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center][/center]"
+text = "[center]Wireless Gamepad[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player4-ilde" type="Sprite2D" parent="Control4"]
@@ -511,7 +511,7 @@ text = "[center]Almidefi[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control4"]
-modulate = Color(0.9, 0.9, 0.1, 1)
+modulate = Color(0.1, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
@@ -526,7 +526,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]WAITING[/center]"
+text = "[center]READY[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound Ready" type="AudioStreamPlayer2D" parent="Control4"]

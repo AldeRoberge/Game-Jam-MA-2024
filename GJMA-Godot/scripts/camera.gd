@@ -75,9 +75,9 @@ func _process(delta: float) -> void:
 			if is_instance_valid(player) and not player._is_dead:
 				player_alive_count += 1
 		
-		player_alive_count == 1
-		for i in range(players.size()):
-			if is_instance_valid(players[i]) && !players[i]._is_dead:
-				Global.add_score_to_player(i)
+		if player_alive_count == 1:
+			for i in range(players.size()):
+				if is_instance_valid(players[i]) && !players[i]._is_dead:
+					Global.add_score_to_player(i)
 
 	pass
