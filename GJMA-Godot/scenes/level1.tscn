@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4pmrthjg0dl6"]
 
-[ext_resource type="PackedScene" uid="uid://cnfr7ji6id3h8" path="res://tilesets/Mountains.tscn" id="1_2morl"]
+[ext_resource type="PackedScene" uid="uid://cnfr7ji6id3h8" path="res://assets/tilesets/Mountains.tscn" id="1_2morl"]
 [ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="2_112lh"]
 
 [node name="Level1" type="Node2D"]

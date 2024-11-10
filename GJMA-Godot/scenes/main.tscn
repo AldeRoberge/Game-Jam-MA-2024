@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6n2opy1im2t6"]
+
+[ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
+[ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
+[ext_resource type="PackedScene" uid="uid://cnfr7ji6id3h8" path="res://assets/tilesets/Mountains.tscn" id="4_81fgx"]
+[ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_kxrjt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Music" parent="." instance=ExtResource("3_qifk4")]
+
+[node name="Camera" parent="." node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("4_kxrjt")]
+position = Vector2(222, 499)
+zoom = Vector2(2.5, 2.5)
+player1 = NodePath("../Players/Player 1")
+player2 = NodePath("../Players/Player 2")
+player3 = NodePath("../Players/Player 3")
+player4 = NodePath("../Players/Player 4")
+
+[node name="Players" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Player 1" parent="Players" instance=ExtResource("2_fbb6p")]
+position = Vector2(65, 617)
+
+[node name="Player ID" type="RichTextLabel" parent="Players/Player 1"]
+modulate = Color(0, 0.733333, 1, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P1[/center]"
+
+[node name="Player 2" parent="Players" instance=ExtResource("2_fbb6p")]
+position = Vector2(128, 598)
+device_id = 1
+
+[node name="Player ID" type="RichTextLabel" parent="Players/Player 2"]
+modulate = Color(1, 0.0117647, 0, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P2[/center]"
+
+[node name="Player 3" parent="Players" instance=ExtResource("2_fbb6p")]
+position = Vector2(255, 578)
+device_id = 2
+
+[node name="Player ID" type="RichTextLabel" parent="Players/Player 3"]
+modulate = Color(0.945769, 2.98411e-06, 0.589617, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P3[/center]"
+
+[node name="Player 4" parent="Players" instance=ExtResource("2_fbb6p")]
+position = Vector2(346, 579)
+device_id = 3
+
+[node name="Player ID" type="RichTextLabel" parent="Players/Player 4"]
+modulate = Color(0, 1, 0, 1)
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 40.0
+bbcode_enabled = true
+text = "[center]P4[/center]"
+
+[node name="Level" parent="." instance=ExtResource("4_81fgx")]
+z_index = -1
+position = Vector2(111, 161)
