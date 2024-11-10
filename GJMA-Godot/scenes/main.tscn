@@ -24,6 +24,7 @@ player3 = NodePath("../../Players/Player 3")
 player4 = NodePath("../../Players/Player 4")
 
 [node name="Death Screen" parent="Menu Canvas" instance=ExtResource("10_nbsak")]
+visible = false
 
 [node name="Music" parent="." instance=ExtResource("3_qifk4")]
 
