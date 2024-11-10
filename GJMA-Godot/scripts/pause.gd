@@ -10,7 +10,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _get_input_start() -> bool:
-	for device in range(3):
+	for device in range(4):
 		if Input.is_joy_button_pressed(device, JOY_BUTTON_START):
 			return true
 	
