@@ -12,9 +12,8 @@ friction = 0.0
 [sub_resource type="Gradient" id="2"]
 colors = PackedColorArray(0.708353, 0.72498, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="SeparationRayShape2D" id="13"]
-custom_solver_bias = 0.5
-length = 18.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8b4o7"]
+radius = 4.0
 
 [node name="Player" type="RigidBody2D"]
 mass = 1.5
@@ -41,15 +40,9 @@ spread = 65.84
 gravity = Vector2(0, -15)
 color_ramp = SubResource("2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1.675)
-shape = SubResource("13")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-1.45591, 2.75882)
-scale = Vector2(0.488945, 0.758822)
-build_mode = 1
-polygon = PackedVector2Array(3.26812, 10.531, -5.45888, -12.531, 7.32374, -12.531)
+[node name="CollisionShape2DCapsule" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_8b4o7")
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = 0
