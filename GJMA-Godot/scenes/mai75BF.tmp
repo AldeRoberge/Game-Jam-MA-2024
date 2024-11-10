@@ -14,11 +14,7 @@
 
 [node name="Menu Canvas" type="CanvasLayer" parent="."]
 
-[node name="Menu Player" parent="Menu Canvas" node_paths=PackedStringArray("player1", "player2", "player3", "player4") instance=ExtResource("5_slmj3")]
-player1 = NodePath("../../Players/Player 1")
-player2 = NodePath("../../Players/Player 2")
-player3 = NodePath("../../Players/Player 3")
-player4 = NodePath("../../Players/Player 4")
+[node name="Menu Player" parent="Menu Canvas" instance=ExtResource("5_slmj3")]
 
 [node name="Music" parent="." instance=ExtResource("3_qifk4")]
 

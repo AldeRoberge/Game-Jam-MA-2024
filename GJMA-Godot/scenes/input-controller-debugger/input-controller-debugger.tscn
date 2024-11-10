@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/input-controller-debugger/input_controller_debugger_scene.gd" id="1_v63wx"]
 [ext_resource type="FontFile" uid="uid://bkrjr1t12kkb7" path="res://assets/fonts/Micro_5/Micro5-Regular.ttf" id="2_3jp1f"]
 [ext_resource type="PackedScene" uid="uid://b6n2opy1im2t6" path="res://scenes/main.tscn" id="2_dv6d2"]
-[ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player-idle.png" id="2_sm6n2"]
+[ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player1-idle.png" id="2_sm6n2"]
 [ext_resource type="Texture2D" uid="uid://cwtu8k5qiw5n2" path="res://assets/sprites/players/p2/player2-ilde.png" id="3_nywmm"]
 [ext_resource type="Texture2D" uid="uid://bmb5472ggabqy" path="res://assets/sprites/players/p3/player3-ilde.png" id="4_ta8db"]
 [ext_resource type="Texture2D" uid="uid://bi5titnj4q7ap" path="res://assets/sprites/players/p4/player4-ilde.png" id="5_vghqv"]
