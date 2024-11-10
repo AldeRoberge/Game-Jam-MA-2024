@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bglfh77lkb3jc"
-path="res://.godot/imported/background-outline.png-6f5d928f1e73b22e5c63a3ede1952075.ctex"
+uid="uid://b3ompli128byj"
+path="res://.godot/imported/star0001.png-fc355df16a7705a0fb8e16ce2fbd0b12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/elements/background-outline.png"
-dest_files=["res://.godot/imported/background-outline.png-6f5d928f1e73b22e5c63a3ede1952075.ctex"]
+source_file="res://assets/elements/star/sprites/star0001.png"
+dest_files=["res://.godot/imported/star0001.png-fc355df16a7705a0fb8e16ce2fbd0b12.ctex"]
 
 [params]
 

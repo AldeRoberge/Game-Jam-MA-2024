@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=11 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
 [ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
 [ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="7_dw1cv"]
+[ext_resource type="PackedScene" uid="uid://jmcy3mp81yh1" path="res://assets/elements/star/sprites/star.tscn" id="9_pctem"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5yykk"]
 
@@ -41,12 +42,23 @@ z_index = 1
 [node name="Player 1" parent="Players" instance=ExtResource("2_fbb6p")]
 position = Vector2(65, 617)
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 1"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P1[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 1"]
 modulate = Color(0, 0.733333, 1, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -56,12 +68,23 @@ text = "[center]P1[/center]"
 position = Vector2(128, 598)
 device_id = 1
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 2"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P2[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 2"]
 modulate = Color(1, 0.0117647, 0, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -71,12 +94,23 @@ text = "[center]P2[/center]"
 position = Vector2(255, 578)
 device_id = 2
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 3"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P3[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 3"]
 modulate = Color(0.945769, 2.98411e-06, 0.589617, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -86,12 +120,23 @@ text = "[center]P3[/center]"
 position = Vector2(346, 579)
 device_id = 3
 
+[node name="Player ID Background" type="RichTextLabel" parent="Players/Player 4"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -3.0
+theme_override_fonts/normal_font = ExtResource("7_dw1cv")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[center]P4[/center]"
+
 [node name="Player ID" type="RichTextLabel" parent="Players/Player 4"]
 modulate = Color(0, 1, 0, 1)
 offset_left = -20.0
-offset_top = 15.0
+offset_top = -29.0
 offset_right = 20.0
-offset_bottom = 40.0
+offset_bottom = -4.0
 theme_override_fonts/normal_font = ExtResource("7_dw1cv")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -104,3 +149,6 @@ position = Vector2(111, -496)
 [node name="Pause" parent="." instance=ExtResource("7_2uwbc")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
+
+[node name="Star" parent="." instance=ExtResource("9_pctem")]
+position = Vector2(186, 632)

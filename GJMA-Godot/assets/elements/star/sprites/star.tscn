@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=3 uid="uid://jmcy3mp81yh1"]
+
+[ext_resource type="Texture2D" uid="uid://vb0ppv20gw1d" path="res://assets/elements/star/sprites/star0000.png" id="1_b7837"]
+[ext_resource type="Texture2D" uid="uid://b3ompli128byj" path="res://assets/elements/star/sprites/star0001.png" id="2_2qfdn"]
+[ext_resource type="Texture2D" uid="uid://d32hn58g1ecjk" path="res://assets/elements/star/sprites/star0002.png" id="3_vr4rg"]
+[ext_resource type="Texture2D" uid="uid://tkkbjlc14yf7" path="res://assets/elements/star/sprites/star0003.png" id="4_yaaqh"]
+[ext_resource type="Script" path="res://assets/elements/star/star.gd" id="5_s67li"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xhtgu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b7837")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2qfdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vr4rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yaaqh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_thk5h"]
+radius = 59.1354
+
+[sub_resource type="Animation" id="Animation_hscbo"]
+resource_name = "star"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(10, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_1h04p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qxiyt"]
+_data = {
+"RESET": SubResource("Animation_1h04p"),
+"star": SubResource("Animation_hscbo")
+}
+
+[node name="Star" type="Node2D"]
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+emission_shape = 1
+emission_sphere_radius = 37.75
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.567622, 0.708996, 1, 1)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_xhtgu")
+autoplay = "default"
+frame_progress = 0.612236
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xhtgu")
+autoplay = "default"
+frame_progress = 0.748326
+
+[node name="Collider" type="Area2D" parent="."]
+script = ExtResource("5_s67li")
+
+[node name="Collision Shape" type="CollisionShape2D" parent="Collider"]
+shape = SubResource("CircleShape2D_thk5h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qxiyt")
+}

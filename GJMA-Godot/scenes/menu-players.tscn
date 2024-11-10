@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/menu_players.gd" id="1_5e7na"]
 [ext_resource type="Texture2D" uid="uid://baevdhsspvife" path="res://assets/sprites/players/p1/player1-face.png" id="1_e3s8g"]
-[ext_resource type="Texture2D" uid="uid://bpm27mbbskqrn" path="res://assets/sprites/elements/background.png" id="2_10mbo"]
+[ext_resource type="Texture2D" uid="uid://bpm27mbbskqrn" path="res://assets/sprites/gui/background.png" id="2_10mbo"]
 [ext_resource type="Texture2D" uid="uid://4lyq8mln2l0f" path="res://assets/sprites/players/p2/player2-face.png" id="2_o8fyt"]
 [ext_resource type="FontFile" uid="uid://dh5v0dn3tssco" path="res://assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="2_qbrnr"]
 [ext_resource type="Texture2D" uid="uid://c2eij8kf1hq8k" path="res://assets/sprites/players/p1/player1-face-dead.png" id="3_7dmm6"]
