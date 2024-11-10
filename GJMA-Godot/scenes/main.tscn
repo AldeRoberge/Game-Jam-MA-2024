@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6n2opy1im2t6"]
+[gd_scene load_steps=12 format=3 uid="uid://b6n2opy1im2t6"]
 
 [ext_resource type="PackedScene" uid="uid://bbxsp4gp554vh" path="res://assets/elements/player/player.tscn" id="2_fbb6p"]
 [ext_resource type="PackedScene" uid="uid://3uy16qn7bsfq" path="res://scenes/music-player.tscn" id="3_qifk4"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://kn7y4314whn2" path="res://scenes/camera_background.tscn" id="4_kxrjt"]
 [ext_resource type="Script" path="res://assets/elements/death_boundary.gd" id="4_o75m3"]
 [ext_resource type="PackedScene" uid="uid://oehrl8ntuxvm" path="res://scenes/menu-players.tscn" id="5_slmj3"]
-[ext_resource type="PackedScene" uid="uid://de3447qef041t" path="res://scenes/pause.tscn" id="7_2uwbc"]
+[ext_resource type="PackedScene" uid="uid://bvnbvi20aov5j" path="res://scenes/pause.tscn" id="7_2uwbc"]
 [ext_resource type="FontFile" uid="uid://o2md5fuywt55" path="res://assets/fonts/Chronotype/ChronoType.ttf" id="7_dw1cv"]
 [ext_resource type="PackedScene" uid="uid://jmcy3mp81yh1" path="res://assets/elements/star/sprites/star.tscn" id="9_pctem"]
+[ext_resource type="PackedScene" uid="uid://0ona0rxec3dw" path="res://assets/elements/screen-death/screen-death.tscn" id="10_nbsak"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5yykk"]
 
@@ -22,6 +23,8 @@ player2 = NodePath("../../Players/Player 2")
 player3 = NodePath("../../Players/Player 3")
 player4 = NodePath("../../Players/Player 4")
 
+[node name="Death Screen" parent="Menu Canvas" instance=ExtResource("10_nbsak")]
+
 [node name="Music" parent="." instance=ExtResource("3_qifk4")]
 
 [node name="Camera" parent="." node_paths=PackedStringArray("players") instance=ExtResource("4_kxrjt")]
@@ -30,7 +33,7 @@ zoom = Vector2(2.5, 2.5)
 players = [NodePath("../Players/Player 1"), NodePath("../Players/Player 2"), NodePath("../Players/Player 3"), NodePath("../Players/Player 4")]
 
 [node name="DeathBoundary" type="Area2D" parent="Camera"]
-position = Vector2(0, 215)
+position = Vector2(0, 271)
 script = ExtResource("4_o75m3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera/DeathBoundary"]

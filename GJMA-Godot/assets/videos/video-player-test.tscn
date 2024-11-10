@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dpsdi3y6igybs"]
 
-[ext_resource type="VideoStream" path="res://assets/videos/output-10.ogv" id="1_bf3wy"]
+[ext_resource type="VideoStream" path="res://assets/videos/output-new.ogv" id="1_tg3aq"]
 
 [node name="Video-player-test" type="Control"]
 layout_mode = 3
@@ -17,6 +17,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_bf3wy")
+stream = ExtResource("1_tg3aq")
 autoplay = true
 expand = true
