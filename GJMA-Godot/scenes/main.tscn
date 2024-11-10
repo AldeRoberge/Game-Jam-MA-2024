@@ -189,101 +189,101 @@ text = "[center]P4[/center]"
 z_index = -1
 position = Vector2(111, -496)
 
+[node name="Coins" type="Node" parent="Level"]
+
+[node name="Coin" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(243, 426)
+
+[node name="Coin2" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(95, 410)
+
+[node name="Coin3" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(64, 653)
+
+[node name="Coin4" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(231, 205)
+
+[node name="Coin5" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(357, 185)
+
+[node name="Coin6" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(16, 130)
+
+[node name="Coin7" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(205, -54)
+
+[node name="Coin8" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(341, -299)
+
+[node name="Coin9" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(168, -473)
+
+[node name="Coin10" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(69, -637)
+
+[node name="Coin11" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(141, -832)
+
+[node name="Coin12" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(293, -960)
+
+[node name="Coin13" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(306, -1089)
+
+[node name="Coin14" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(213, -1329)
+
+[node name="Coin15" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(205, -1487)
+
+[node name="Coin16" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(284, -1693)
+
+[node name="Coin17" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(172, -1888)
+
+[node name="Coin18" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(280, -2011)
+
+[node name="Coin19" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(261, -2251)
+
+[node name="Coin20" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(212, -2429)
+
+[node name="Coin21" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(165, -2674)
+
+[node name="Coin22" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(310, -2864)
+
+[node name="Coin23" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(316, -3135)
+
+[node name="Coin24" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(151, -3388)
+
+[node name="Coin25" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(331, -3666)
+
+[node name="Coin26" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(125, -3873)
+
+[node name="Coin27" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(169, -4096)
+
+[node name="Coin28" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(85, -4300)
+
+[node name="Coin29" parent="Level/Coins" instance=ExtResource("8_d6v6a")]
+position = Vector2(301, -4413)
+
+[node name="Star" parent="Level" node_paths=PackedStringArray("music", "fade_to_white") instance=ExtResource("11_slc2i")]
+process_mode = 3
+position = Vector2(53, -4242)
+music = NodePath("../../Music")
+fade_to_white = NodePath("../../Menu Canvas/Fade to White")
+
 [node name="Pause" parent="." instance=ExtResource("7_2uwbc")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause"]
-
-[node name="Coins" type="Node" parent="."]
-
-[node name="Coin" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(243, 426)
-
-[node name="Coin2" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(95, 410)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(64, 653)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(231, 205)
-
-[node name="Coin5" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(357, 185)
-
-[node name="Coin6" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(16, 130)
-
-[node name="Coin7" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(205, -54)
-
-[node name="Coin8" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(341, -299)
-
-[node name="Coin9" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(168, -473)
-
-[node name="Coin10" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(69, -637)
-
-[node name="Coin11" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(141, -832)
-
-[node name="Coin12" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(293, -960)
-
-[node name="Coin13" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(306, -1089)
-
-[node name="Coin14" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(213, -1329)
-
-[node name="Coin15" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(205, -1487)
-
-[node name="Coin16" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(284, -1693)
-
-[node name="Coin17" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(172, -1888)
-
-[node name="Coin18" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(280, -2011)
-
-[node name="Coin19" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(261, -2251)
-
-[node name="Coin20" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(212, -2429)
-
-[node name="Coin21" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(165, -2674)
-
-[node name="Coin22" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(310, -2864)
-
-[node name="Coin23" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(316, -3135)
-
-[node name="Coin24" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(151, -3388)
-
-[node name="Coin25" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(331, -3666)
-
-[node name="Coin26" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(125, -3873)
-
-[node name="Coin27" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(169, -4096)
-
-[node name="Coin28" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(85, -4300)
-
-[node name="Coin29" parent="Coins" instance=ExtResource("8_d6v6a")]
-position = Vector2(301, -4413)
-
-[node name="Star" parent="." node_paths=PackedStringArray("music", "fade_to_white") instance=ExtResource("11_slc2i")]
-process_mode = 3
-position = Vector2(164, -4738)
-music = NodePath("../Music")
-fade_to_white = NodePath("../Menu Canvas/Fade to White")
