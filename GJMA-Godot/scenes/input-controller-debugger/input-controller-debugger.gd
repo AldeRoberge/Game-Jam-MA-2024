@@ -9,13 +9,19 @@ extends Control
 @export var label_device_name: RichTextLabel
 @export var label_state: RichTextLabel
 
+@export var sound_ready: AudioStreamPlayer2D
+
 var state: String = "WAITING"
 
 func _process(delta: float) -> void:
 	if Input.is_joy_button_pressed(device, JOY_BUTTON_START):
+		if (state == "ready"):
+			return;
+
 		state = "ready"
 		label_state.text = "[center]READY[/center]"
 		label_state.modulate = Color(0.1, 0.9, 0.1)
+		sound_ready.play()
 	queue_redraw()
 
 # on start, set label text to the device name
@@ -28,7 +34,7 @@ func _ready() -> void:
 
 func _draw() -> void:
 	# Set the size, the layout isn't dynamic and based on something I sketched!
-	size = Vector2(81, 69)
+	size = Vector2(81, 85)
 	
 	# Draw the background
 	draw_rect(Rect2(0, 0, size.x, size.y), Color(0.15, 0.15, 0.15, 0.45))
