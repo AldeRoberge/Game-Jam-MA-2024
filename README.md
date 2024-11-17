@@ -10,6 +10,11 @@ Un soir, autour d’une bière, un vieux sage leur raconte une légende : au som
 
 Décidés à changer leur destin, les quatre amis se lancent dans une quête. Mais un seul pourra atteindre l’étoile. Qui d’entre eux triomphera ?
 
+## How to play
+* Press play
+* Connect 1 to 4 controllers
+* Press Start
+* Get to the top of the mountain
 
 ## Équipe
 * Philippe Turcot-Roy (Design, Story, Videos, Pixel Art)
