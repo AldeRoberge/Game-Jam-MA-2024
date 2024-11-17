@@ -12,7 +12,7 @@ Décidés à changer leur destin, les quatre amis se lancent dans une quête. Ma
 
 
 ## Équipe
-Philippe Turcot-Roy (Design, Story, Videos, Pixel Art)
-Michaël Gagnon (Level design, Design, Asset Research)
-Dérick Gagnon (Programming)
-Alexandre Demers-Roberge (Programming)
+* Philippe Turcot-Roy (Design, Story, Videos, Pixel Art)
+* Michaël Gagnon (Level design, Design, Asset Research)
+* Dérick Gagnon (Programming)
+* Alexandre Demers-Roberge (Programming)
