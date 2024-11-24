@@ -1,17 +1,21 @@
-[gd_resource type="SpriteFrames" load_steps=42 format=3 uid="uid://b781bvn1upjuy"]
+[gd_resource type="SpriteFrames" load_steps=46 format=3 uid="uid://b781bvn1upjuy"]
 
 [ext_resource type="Texture2D" uid="uid://csh2dnxwypmh3" path="res://assets/sprites/players/p1/player1-jump.png" id="1_emyxg"]
 [ext_resource type="Texture2D" uid="uid://c4lhuknigghff" path="res://assets/sprites/players/p1/player1-idle.png" id="2_v48pf"]
 [ext_resource type="Texture2D" uid="uid://pt2du3wvmog" path="res://assets/sprites/players/p1/player1-walk.png" id="3_5408u"]
+[ext_resource type="Texture2D" uid="uid://cjkc6em84f1m1" path="res://assets/sprites/players/p1/player1-punch.png" id="3_q6swf"]
 [ext_resource type="Texture2D" uid="uid://cwtu8k5qiw5n2" path="res://assets/sprites/players/p2/player2-ilde.png" id="4_pb674"]
 [ext_resource type="Texture2D" uid="uid://mrvfewqitokr" path="res://assets/sprites/players/p2/player2-jump.png" id="5_p0b52"]
 [ext_resource type="Texture2D" uid="uid://cdx6htd5gcwqv" path="res://assets/sprites/players/p2/player2-walk.png" id="6_ednem"]
+[ext_resource type="Texture2D" uid="uid://dku24bs2dcn6v" path="res://assets/sprites/players/p2/player2-punch.png" id="7_km3sn"]
 [ext_resource type="Texture2D" uid="uid://bmb5472ggabqy" path="res://assets/sprites/players/p3/player3-ilde.png" id="7_ukly8"]
 [ext_resource type="Texture2D" uid="uid://bswsulvtdglcn" path="res://assets/sprites/players/p3/player3-jump.png" id="8_4p8wx"]
 [ext_resource type="Texture2D" uid="uid://yugl7ve50iwk" path="res://assets/sprites/players/p3/player3-walk.png" id="9_noh4g"]
 [ext_resource type="Texture2D" uid="uid://bi5titnj4q7ap" path="res://assets/sprites/players/p4/player4-ilde.png" id="10_n0oyo"]
 [ext_resource type="Texture2D" uid="uid://dhqdt743bfq8o" path="res://assets/sprites/players/p4/player4-jump.png" id="11_4gxg7"]
+[ext_resource type="Texture2D" uid="uid://cq2h1lfojmqeu" path="res://assets/sprites/players/p3/player3-punch.png" id="11_wj2kx"]
 [ext_resource type="Texture2D" uid="uid://o6of4upoawra" path="res://assets/sprites/players/p4/player4-walk.png" id="12_esl2v"]
+[ext_resource type="Texture2D" uid="uid://ce002j17ju6y5" path="res://assets/sprites/players/p4/player4-punch.png" id="15_wp6x7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6f5m"]
 atlas = ExtResource("1_emyxg")
@@ -163,6 +167,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_q6swf")
+}],
+"loop": true,
+"name": &"p1_punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_84yxd")
 }, {
 "duration": 1.0,
@@ -206,6 +218,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"p2_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_km3sn")
+}],
+"loop": true,
+"name": &"p2_punch",
 "speed": 5.0
 }, {
 "frames": [{
@@ -257,6 +277,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("11_wj2kx")
+}],
+"loop": true,
+"name": &"p3_punch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_j1qsy")
 }, {
 "duration": 1.0,
@@ -300,6 +328,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"p4_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_wp6x7")
+}],
+"loop": true,
+"name": &"p4_punch",
 "speed": 5.0
 }, {
 "frames": [{

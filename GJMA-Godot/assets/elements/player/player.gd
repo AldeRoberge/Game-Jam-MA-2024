@@ -33,6 +33,8 @@ var _is_dead: bool = false
 
 signal signal_on_death
 
+@onready var sound_punch := $"Sound Punch" as AudioStreamPlayer2D
+@onready var sound_punch_hit := $"Sound Punch Hit" as AudioStreamPlayer2D
 @onready var sound_jump := $"Sound Jump" as AudioStreamPlayer2D
 @onready var sound_death := $"Sound Death" as AudioStreamPlayer2D
 @onready var sound_shoot := $"Sound Shoot" as AudioStreamPlayer2D
@@ -45,6 +47,15 @@ func _ready() -> void:
 		for children in get_children():
 			children.queue_free()
 		queue_free()
+
+
+func _do_punch() -> void:
+	sound_punch.play()
+
+	# play the animation (punch)
+	sprite.play(_get_player_id() + "punch")
+	
+
 
 func _do_jump(velocity: Vector2) -> Vector2:
 	velocity.y = -JUMP_VELOCITY
@@ -65,7 +76,11 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	var move_left := _get_input_dpad_left() or _get_input_joy_left().x < -0.5
 	var move_right := _get_input_dpad_right() or _get_input_joy_left().x > 0.5
 	var jump := _get_input_jump()
+	var punch := _get_input_punch()
 	var spawn := _get_input_spawn()
+
+	if punch:
+		_do_punch()
 
 #	if spawn:
 #		_spawn_enemy_above.call_deferred()
@@ -242,6 +257,16 @@ func _kill_player() -> void:
 	#for children in get_children():
 	#	children.queue_free()
 	#queue_free()
+
+
+
+
+# Get the punch input (right bumper)
+func _get_input_punch() -> bool:
+	return Input.is_joy_button_pressed(device_id, JOY_BUTTON_RIGHT_SHOULDER)
+
+
+
 
 # Get the jump input (any face button)
 func _get_input_jump() -> bool:
