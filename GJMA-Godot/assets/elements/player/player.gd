@@ -102,6 +102,8 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 		if stopping_jump:
 			velocity.y += STOP_JUMP_FORCE * step
+			
+		
 
 	if on_floor:
 		# Process logic when character is on floor.
@@ -156,7 +158,15 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		if velocity.y > 0:
 			new_anim = _get_player_id() + "fall"
 		elif velocity.y < 0:
-			new_anim = _get_player_id() + "idle"
+			new_anim = _get_player_id() + "jump"
+
+		if move_left and not move_right:
+			new_siding_left = true
+			new_anim = _get_player_id() + "walk"
+		elif move_right and not move_left:
+			new_siding_left = false
+			new_anim = _get_player_id() + "walk"
+
 
 	# Update siding.
 	if new_siding_left != siding_left:

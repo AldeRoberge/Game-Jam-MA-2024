@@ -216,7 +216,7 @@ theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]XInput Gamepad[/center]"
+text = "[center][/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player2-ilde" type="Sprite2D" parent="Control2"]
@@ -339,7 +339,7 @@ theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]XInput Gamepad[/center]"
+text = "[center][/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player3-ilde" type="Sprite2D" parent="Control3"]
@@ -388,7 +388,7 @@ text = "[center]Lifex[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control3"]
-modulate = Color(0.1, 0.9, 0.1, 1)
+modulate = Color(0.9, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
@@ -403,7 +403,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]READY[/center]"
+text = "[center]WAITING[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound Ready" type="AudioStreamPlayer2D" parent="Control3"]
@@ -462,7 +462,7 @@ theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
-text = "[center]Wireless Gamepad[/center]"
+text = "[center][/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Player4-ilde" type="Sprite2D" parent="Control4"]
@@ -511,7 +511,7 @@ text = "[center]Almidefi[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="State" type="RichTextLabel" parent="Control4"]
-modulate = Color(0.1, 0.9, 0.1, 1)
+modulate = Color(0.9, 0.9, 0.1, 1)
 texture_filter = 3
 layout_mode = 1
 anchors_preset = -1
@@ -526,7 +526,7 @@ offset_bottom = 224.0
 theme_override_fonts/normal_font = ExtResource("6_slguo")
 theme_override_font_sizes/mono_font_size = 24
 bbcode_enabled = true
-text = "[center]READY[/center]"
+text = "[center]WAITING[/center]"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sound Ready" type="AudioStreamPlayer2D" parent="Control4"]
