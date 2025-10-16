@@ -1,23 +1,30 @@
 # Game-Jam-MA-2024
- Repository for the Game-Jam-MA-2024 project.
 
 ![image](https://github.com/user-attachments/assets/50021fd5-cfb5-46f1-9975-b087546b8ba6)
 
-## L'étoile de Nourry-Andona
-Mada ne peut plus jouer à ses consoles gelées, Vitalen ne peut plus ouvrir ses livres figés, Lifex ne peut plus jouer de ses instruments glacés, et Almidéphi cherche désespérément à libérer son chat prisonnier d’un bloc de glace.  
+* Winner of the 2024 game jam for the Musée d'Art de Rouyn-Noranda (MA).
+* Made in 48 hours
+* Uses Godot
+* Multiplayer up to 4 players
 
-Un soir, autour d’une bière, un vieux sage leur raconte une légende : au sommet de la plus haute montagne brille l’Étoile du Nord. Sa lumière exauce le rêve de celui qui la touche.  
+## The Star of Nourry-Andona
 
-Décidés à changer leur destin, les quatre amis se lancent dans une quête. Mais un seul pourra atteindre l’étoile. Qui d’entre eux triomphera ?
+Mada can no longer play on his frozen consoles, Vitalen can’t open his frozen books, Lifex can’t play his frozen instruments, and Almidéphi is desperately trying to free his cat trapped in a block of ice.
+
+One evening, over a beer, an old sage tells them a legend: at the top of the highest mountain shines the Northern Star. Its light grants the dream of whoever touches it.
+
+Determined to change their fate, the four friends set out on a quest. But only one can reach the star. Who among them will triumph?
 
 ## How to play
-* Press play
+
+* Press Play
 * Connect 1 to 4 controllers
 * Press Start
-* Get to the top of the mountain
+* Climb to the top of the mountain
 
-## Équipe
+## Team
+
 * Philippe Turcot-Roy (Design, Story, Videos, Pixel Art)
-* Michaël Gagnon (Level design, Design, Asset Research)
+* Michaël Gagnon (Level Design, Design, Asset Research)
 * Dérick Gagnon (Programming)
 * Alexandre Demers-Roberge (Programming)
