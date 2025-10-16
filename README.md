@@ -1,4 +1,4 @@
-# Game-Jam-MA-2024
+# L'étoile de Nourry-Andona (Game-Jam-MA-2024)
 
 ![image](https://github.com/user-attachments/assets/50021fd5-cfb5-46f1-9975-b087546b8ba6)
 
